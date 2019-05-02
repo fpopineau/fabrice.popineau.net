@@ -19,10 +19,6 @@
   </url>
   
   <url>
-    <loc>http://fabrice.popineau.net/</loc>
-  </url>
-  
-  <url>
     <loc>http://fabrice.popineau.net/cv/</loc>
   </url>
   
@@ -44,11 +40,6 @@
   
   <url>
     <loc>http://fabrice.popineau.net/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://fabrice.popineau.net/tags/noexport/</loc>
     <priority>0</priority>
   </url>
   
