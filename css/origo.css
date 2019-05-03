@@ -162,3 +162,9 @@ ul.org-ul li {
 .outline-2 {
     margin-bottom: 20px;
 }
+
+span.TypoTEX {letter-spacing: -0.125em; }
+span.TypoTEX span.E{ position:relative;top:0.5ex;left:-0.0417em;}
+a span.TypoTEX span.E {text-decoration: none; }
+span.TypoLATEX span.A{ position:relative; top:-0.5ex; left:-0.4em; font-size:85%;}
+span.TypoLATEX span.TypoTEX{ position:relative; left: -0.4em; }
