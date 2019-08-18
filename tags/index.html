@@ -16,34 +16,33 @@
   
 </head>
 
-  <body class="light blue smaller freestyle01">
+  <body class="light blue smaller freestyle01" id="_body">
 
-    <div id="layout">
-      
-<div class="row smaller">
-  <div class="col c10 smaller">
+    
+  <div class="header alignleft">
     <h1><a href="index.html">FABRICE POPINEAU @ CENTRALESUPELEC</a></h1>
   </div>
   
-  <div class="col c2 aligncenter">
-    <p class="slogan">...</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col c12 aligncenter">
+  <div class="logo">
     <div class="center-cropped" style="background-image: url('/images/bandeau-loire.jpg');">
       <img src="/images/bandeau-loire.jpg" alt="" />
     </div>
   </div>
-</div>
+
+  <div class="header-selfie alignright">
+    <img class="selfie" src='/images/Fabrice2-BG.png'></img>
+    
+  </div>
+
+
+  
 
 
 
 
 
-            <div class="row">
-<nav class="col c2 alignleft" role="navigation">
+<nav class="menu alignleft" role="navigation" id="mySidebar">
+  
   
   <ul class="menu">
     
@@ -117,28 +116,32 @@
     
 
   </ul>
-
 </nav>
 
-      
-<div class="col c10">
-  <main id="main">
+    
+    <button class="button" id="button1" onclick="menu_open()">&#9776;</button>
+    <main class="main" id="main">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
   </main>
-</div>
 
-      </div>
-      <footer>
-  <div id="footer" class="row">
-    <div class="col c12 aligncenter">
+    <footer class="footer aligncenter" id="footer">
       <h3>&copy; 2019 Fabrice Popineau</h3>
       
 	
-    </div>
-  </div>
 </footer>
 
-    </div>
+
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -149,5 +152,78 @@
   ga('send', 'pageview');
 </script>
 
+    
+    <script>
+      function adjustDisplay() {
+          if (window.matchMedia("(max-width: 768px)").matches) {
+              gridTemplateColumns_widen = "1vw 1fr auto 1vw";
+              gridTemplateColumns_narrow = "1vw 0fr auto 1vw";
+              body_background_size = "150vw 100vh";
+              menu_dynamic = true;
+          }
+          else if (window.matchMedia("(min-width: 769px) and (max-width: 960px)").matches) {
+              gridTemplateColumns_widen = "5vw 1fr auto 5vw";
+              gridTemplateColumns_narrow = "5vw 0fr auto 5vw";
+              body_background_size = "130vw 100vh";
+              menu_dynamic = true;
+          }
+          else if (window.matchMedia("(min-width: 961px) and (max-width: 1024px)").matches) {
+              gridTemplateColumns_widen = "10vw 1fr auto 10vw";
+              gridTemplateColumns_narrow = "10vw 1fr auto 10vw";
+              body_background_size = "110vw 100vh";
+              menu_dynamic = false;
+          }
+          else if (window.matchMedia("(min-width: 1025px) and (max-width: 1280px)").matches) {
+              gridTemplateColumns_widen = "10vw 1fr 5fr 10vw";
+              gridTemplateColumns_narrow = "10vw 1fr 5fr 10vw";
+              body_background_size = "100vw 100vh";
+              menu_dynamic = false;
+          }
+          else if (window.matchMedia("(min-width: 1281px) and (max-width: 1600px)").matches) {
+              gridTemplateColumns_widen = "15vw 1fr 5fr 15vw";
+              gridTemplateColumns_narrow = "15vw 1fr 5fr 15vw";
+              body_background_size = "80vw 100vh";
+              menu_dynamic = false;
+          }
+          else {
+              gridTemplateColumns_widen = "200px 1fr 5fr 200px";
+              gridTemplateColumns_narrow = "200px 1fr 5fr 200px";
+              body_background_size = "80vw 100vh";
+              menu_dynamic = false;
+          }
+          body = document.getElementById("_body");
+          body.style.gridTemplateColumns = gridTemplateColumns_narrow;
+          body.style.backgroundSize = body_background_size;
+          if (menu_dynamic) {
+              document.getElementById("mySidebar").style.display = "none";
+              document.getElementById("button1").style.display = "block";
+          }
+          else {
+              document.getElementById("mySidebar").style.display = "block";
+              document.getElementById("button1").style.display = "none";
+          }
+      }
+      function menu_open() {
+          if (menu_dynamic) {
+              if (menu_closed) {
+                  body = document.getElementById("_body");
+                  body.style.gridTemplateColumns = gridTemplateColumns_widen;
+                  document.getElementById("mySidebar").style.display = "block";
+                  menu_closed = false;
+              }
+              else {
+                  body = document.getElementById("_body");
+                  body.style.gridTemplateColumns = gridTemplateColumns_narrow;         
+                  document.getElementById("mySidebar").style.display = "none";
+                  menu_closed = true;
+              }
+          }
+          
+      } 
+
+      var menu_closed = true;
+      document.addEventListener('DOMContentLoaded', adjustDisplay, false);
+      window.onresize = adjustDisplay;
+    </script>
   </body>
 </html>
