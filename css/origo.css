@@ -89,7 +89,7 @@ body{
         grid-template-areas: "lmargin header header rmargin"
                              "lmargin logo   logo   rmargin"
                              "lmargin menu   main   rmargin"
-                             "lmargin footer main   rmargin";
+                             "lmargin menu   footer rmargin";
         grid-template-rows: auto 20vh auto auto;
     }
 
@@ -102,7 +102,7 @@ body{
         grid-template-areas: "lmargin header header rmargin"
                              "lmargin logo   logo   rmargin"
                              "lmargin menu   main   rmargin"
-                             "lmargin footer main   rmargin";
+                             "lmargin menu   footer rmargin";
         grid-template-rows: auto 20vh auto auto;
     }
 
@@ -121,7 +121,7 @@ body{
         grid-template-areas: "lmargin header header rmargin"
                              "lmargin logo   logo   rmargin"
                              "lmargin menu   main   rmargin"
-                             "lmargin footer main   rmargin";
+                             "lmargin menu   footer rmargin";
     grid-template-rows: auto 20vh auto auto;
     }
 }
@@ -138,7 +138,7 @@ body{
         grid-template-areas: "lmargin header header rmargin"
                              "lmargin logo   logo   rmargin"
                              "lmargin menu   main   rmargin"
-                             "lmargin footer main   rmargin";
+                             "lmargin menu   footer rmargin";
     grid-template-rows: auto minmax(20vh, 240px) auto auto;
     }
 
@@ -230,6 +230,10 @@ ul.menu li {
 ul.menu li a {font-size:1.2em; font-weight:400;}
 ul.menu li a:hover {color:#eee; text-decoration:none;}
 
+.main ul {
+    list-style-type: "-";
+    padding: 0 1em;
+}
 /* Additional text classes */
 .slogan {color:#bbb; font-size:1.2em;}
 .alignleft {text-align:left;}
@@ -372,8 +376,11 @@ span.TypoLATEX span.TypoTEX{ position:relative; left: -0.4em; }
 /* } */
 
 /* Grid classes, fixed width, 960px with 12 columns */
-/* .col {float:left; margin:0 10px; overflow:hidden; float:left; display:inline;} */
-/* .col img {max-width:100%;} */
+.col {float:left; margin:0 6px; overflow:hidden; display:inline;}
+.c3 {width: 30%;}
+.c4 {width: 36%;}
+.c6 {width: 60%;}
+.col img {max-width:100%;}
 
 /* @media (max-width:959px){ */
 /* .row {width:320px; margin:20px auto 0; overflow:hidden;} */
