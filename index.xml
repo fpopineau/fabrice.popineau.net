@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fabrice Popineau @ CentraleSupelec on </title>
-    <link>http://fabrice.popineau.net/</link>
+    <link>https://fabrice.popineau.net/</link>
     <description>Recent content in Fabrice Popineau @ CentraleSupelec on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://fabrice.popineau.net/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fabrice.popineau.net/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Research</title>
-      <link>http://fabrice.popineau.net/research/</link>
+      <link>https://fabrice.popineau.net/research/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://fabrice.popineau.net/research/</guid>
+      <guid>https://fabrice.popineau.net/research/</guid>
       <description>Topics My main research aims at using artificial intelligence techniques to optimize human learning. In this current era where digital access to knowledge is cheap and user attention is expensive, a number of online applications have been developed for learning. These platforms collect a massive amount of data over various profiles, that can be used to improve learning experience: intelligent tutoring systems can infer what activities worked for different types of students in the past, and apply this knowledge to instruct new students.</description>
     </item>
     
     <item>
       <title>Publications</title>
-      <link>http://fabrice.popineau.net/publications/</link>
+      <link>https://fabrice.popineau.net/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://fabrice.popineau.net/publications/</guid>
+      <guid>https://fabrice.popineau.net/publications/</guid>
       <description>(save-excursion (ignore-errors (load-library &amp;quot;org-bibtex&amp;quot;) (switch-to-buffer (find-file-noselect &amp;quot;~/Org/popineau/Publications.org&amp;quot;)) (org-bibtex &amp;quot;~/Org/popineau/Publications-TeXLive.bib&amp;quot; &amp;quot;TeX&amp;quot;) (org-bibtex &amp;quot;~/Org/popineau/Publications-journal-temp.bib&amp;quot; &amp;quot;journal+EIAH|journal+IR|crossref&amp;quot;) (call-process &amp;quot;bib2bib.exe&amp;quot; nil (get-buffer-create (make-temp-name &amp;quot;*bib2bib-*&amp;quot;)) nil &amp;quot;-c&amp;quot; &amp;quot;keywords : \&amp;quot;EIAH\\|IR\&amp;quot;&amp;quot; &amp;quot;--expand-xrefs&amp;quot; &amp;quot;-ob&amp;quot; &amp;quot;popineau/Publications-journal.bib&amp;quot; &amp;quot;popineau/Publications-journal-temp.bib&amp;quot;) (org-bibtex &amp;quot;~/Org/popineau/Publications-inbook-temp.bib&amp;quot; &amp;quot;inbook+EIAH|inbook+IR|crossref&amp;quot;) (call-process &amp;quot;bib2bib.exe&amp;quot; nil (get-buffer-create (make-temp-name &amp;quot;*bib2bib-*&amp;quot;)) nil &amp;quot;-c&amp;quot; &amp;quot;keywords : \&amp;quot;EIAH\\|IR\&amp;quot;&amp;quot; &amp;quot;--expand-xrefs&amp;quot; &amp;quot;-ob&amp;quot; &amp;quot;popineau/Publications-inbook.bib&amp;quot; &amp;quot;popineau/Publications-inbook-temp.bib&amp;quot;) (org-bibtex &amp;quot;~/Org/popineau/Publications-conf-temp.bib&amp;quot; &amp;quot;conf+EIAH|conf+IR|crossref&amp;quot;) (call-process &amp;quot;bib2bib.exe&amp;quot; nil (get-buffer-create (make-temp-name &amp;quot;*bib2bib-*&amp;quot;)) nil &amp;quot;-c&amp;quot; &amp;quot;keywords : \&amp;quot;EIAH\\|IR\&amp;quot;&amp;quot; &amp;quot;--expand-xrefs&amp;quot; &amp;quot;-ob&amp;quot; &amp;quot;popineau/Publications-conf.bib&amp;quot; &amp;quot;popineau/Publications-conf-temp.bib&amp;quot;) (org-bibtex &amp;quot;~/Org/popineau/Publications-poster-temp.bib&amp;quot; &amp;quot;poster+EIAH|poster+IR|crossref&amp;quot;) (call-process &amp;quot;bib2bib.exe&amp;quot; nil (get-buffer-create (make-temp-name &amp;quot;*bib2bib-*&amp;quot;)) nil &amp;quot;-c&amp;quot; &amp;quot;keywords : \&amp;quot;EIAH\\|IR\&amp;quot;&amp;quot; &amp;quot;--expand-xrefs&amp;quot; &amp;quot;-ob&amp;quot; &amp;quot;popineau/Publications-poster.</description>
     </item>
     
     <item>
       <title>Teaching</title>
-      <link>http://fabrice.popineau.net/teaching/</link>
+      <link>https://fabrice.popineau.net/teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://fabrice.popineau.net/teaching/</guid>
+      <guid>https://fabrice.popineau.net/teaching/</guid>
       <description>Current Courses since 2018 &amp;ndash; Cours Algorithmique et Complexité. CentraleSupelec, campus de Gif.
 since 2016 &amp;ndash; Big Data. CentraleSupelec, campus de Gif, parcours ingénieur Supélec.
 since 2012 &amp;ndash; Modèles du Calcul. Cours de 3ème année Majeure Informatique. CentraleSupelec, campus de Gif, parcours ingénieur Supélec.
@@ -43,38 +43,38 @@ Others : Formation continue : CQP / Master ASI - Développement d&amp;rsquo;appl
     
     <item>
       <title>CV</title>
-      <link>http://fabrice.popineau.net/cv/</link>
+      <link>https://fabrice.popineau.net/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://fabrice.popineau.net/cv/</guid>
+      <guid>https://fabrice.popineau.net/cv/</guid>
       <description>You can download my Resume / Vita / C.V. / Curriculum Vitae.</description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>http://fabrice.popineau.net/contact/</link>
+      <link>https://fabrice.popineau.net/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://fabrice.popineau.net/contact/</guid>
+      <guid>https://fabrice.popineau.net/contact/</guid>
       <description>You can contact me at:
 CentraleSupelec           tel : +33 (0) 169851950   mail : fabrice dot popineau     at centralesupelec dot fr   location : Desk D2.21     Computer Science department     CentraleSupélec     Plateau de Moulon     3, rue Joliot-Curie     F-91190 Gif-sur-Yvette, FRANCE    LRI           tel : +33 (0) 169851950   mail : fabrice dot popineau at lri dot fr   location : Desk 134/PCRI-S     Laboratoire de Recherche en Informatique     Bâtiment 650 Ada Lovelace     rue Noetzlin     F-91190 Gif-sur-Yvette, FRANCE     Werbung: pureblack.</description>
     </item>
     
     <item>
       <title>Main publications</title>
-      <link>http://fabrice.popineau.net/publications-main/</link>
+      <link>https://fabrice.popineau.net/publications-main/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://fabrice.popineau.net/publications-main/</guid>
+      <guid>https://fabrice.popineau.net/publications-main/</guid>
       <description>Journal articles References  [1]  Jill-J&amp;ecirc;nn Vie, Fabrice Popineau, Eric Bruillard, and Yolaine Bourda. Simulation et validation de tests adaptatifs dans les mooc. Sciences et Technologies de l&#39;Information et de la Communication pour l&#39;&amp;Eacute;ducation et la Formation, 24(2):149--167, 2017. [&amp;nbsp;bib&amp;nbsp;]   [2]  Youssef Meguebli, Mouna Kacimi, Bich-Liên Doan, and Fabrice Popineau. Towards better news article recommendation. World Wide Web Journal, 20(1):1--20, 2017. [&amp;nbsp;bib&amp;nbsp;]   [3]  Jill-Jênn Vie, Fabrice Popineau, Éric Bruillard, and Yolaine Bourda.</description>
     </item>
     
     <item>
       <title>Artificial Intelligence</title>
-      <link>http://fabrice.popineau.net/publications-books/</link>
+      <link>https://fabrice.popineau.net/publications-books/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://fabrice.popineau.net/publications-books/</guid>
+      <guid>https://fabrice.popineau.net/publications-books/</guid>
       <description>The leading textbook about artificial intelligence by Stuart Russell and Peter Norvig has been translated to French. I supervised the French translation of the 2nd and 3rd editions together with Laurent Miclet.
 The translation by itself has been achieved by a pool of professional translators. It has been a tremendous work at all levels:
  splitting the translation job and providing translators with the technical vocabulary they missed, gathering translated parts and polishing the result, carefully proofreading the text (3 times!</description>
@@ -82,10 +82,10 @@ The translation by itself has been achieved by a pool of professional translator
     
     <item>
       <title>TeX related publications, presentations and seminars</title>
-      <link>http://fabrice.popineau.net/publications-tex/</link>
+      <link>https://fabrice.popineau.net/publications-tex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://fabrice.popineau.net/publications-tex/</guid>
+      <guid>https://fabrice.popineau.net/publications-tex/</guid>
       <description>Up to around 2005, I have devoted a great part of my research time to facilitating the dissemination of TeX, resulting in a few TeX related publications.
 I have maintained the TeXLive distribution of TeX for Windows for about 10 years. This was a demanding but rewarding collaborative work.
 I have (co-)organized the 2005 EuroTeX meeting in Pont-à-Mousson with Donald E. Knuth and Hermann Zapf as guests. The full proceedings of the conference are available online.</description>
