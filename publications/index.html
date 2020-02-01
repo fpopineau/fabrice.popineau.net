@@ -134,45 +134,37 @@
     
     
     
-    
-
-<pre><code class="language-emacs-lisp">(save-excursion
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(save-excursion
   (ignore-errors
-    (load-library &quot;org-bibtex&quot;)
-    (switch-to-buffer (find-file-noselect &quot;~/Org/popineau/Publications.org&quot;))
-    (org-bibtex &quot;~/Org/popineau/Publications-TeXLive.bib&quot; &quot;<span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span>&quot;)
-    (org-bibtex &quot;~/Org/popineau/Publications-journal-temp.bib&quot; &quot;journal+EIAH|journal+IR|crossref&quot;)
-    (call-process &quot;bib2bib.exe&quot; nil (get-buffer-create (make-temp-name &quot;*bib2bib-*&quot;)) nil
-                  &quot;-c&quot; &quot;keywords : \&quot;EIAH\\|IR\&quot;&quot; &quot;--expand-xrefs&quot; &quot;-ob&quot; &quot;popineau/Publications-journal.bib&quot; &quot;popineau/Publications-journal-temp.bib&quot;)
-    (org-bibtex &quot;~/Org/popineau/Publications-inbook-temp.bib&quot; &quot;inbook+EIAH|inbook+IR|crossref&quot;)
-    (call-process &quot;bib2bib.exe&quot; nil (get-buffer-create (make-temp-name &quot;*bib2bib-*&quot;)) nil
-                  &quot;-c&quot; &quot;keywords : \&quot;EIAH\\|IR\&quot;&quot; &quot;--expand-xrefs&quot; &quot;-ob&quot; &quot;popineau/Publications-inbook.bib&quot; &quot;popineau/Publications-inbook-temp.bib&quot;)
-    (org-bibtex &quot;~/Org/popineau/Publications-conf-temp.bib&quot; &quot;conf+EIAH|conf+IR|crossref&quot;)
-    (call-process &quot;bib2bib.exe&quot; nil (get-buffer-create (make-temp-name &quot;*bib2bib-*&quot;)) nil
-                  &quot;-c&quot; &quot;keywords : \&quot;EIAH\\|IR\&quot;&quot; &quot;--expand-xrefs&quot; &quot;-ob&quot; &quot;popineau/Publications-conf.bib&quot; &quot;popineau/Publications-conf-temp.bib&quot;)
-    (org-bibtex &quot;~/Org/popineau/Publications-poster-temp.bib&quot; &quot;poster+EIAH|poster+IR|crossref&quot;)
-    (call-process &quot;bib2bib.exe&quot; nil (get-buffer-create (make-temp-name &quot;*bib2bib-*&quot;)) nil
-                  &quot;-c&quot; &quot;keywords : \&quot;EIAH\\|IR\&quot;&quot; &quot;--expand-xrefs&quot; &quot;-ob&quot; &quot;popineau/Publications-poster.bib&quot; &quot;popineau/Publications-poster-temp.bib&quot;)
+    (load-library <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">org-bibtex</span><span style="color:#e6db74">&#34;</span>)
+    (switch-to-buffer (find-file-noselect <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">~/Org/popineau/Publications.org</span><span style="color:#e6db74">&#34;</span>))
+    (org-bibtex <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">~/Org/popineau/Publications-TeXLive.bib</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74"><span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span></span><span style="color:#e6db74">&#34;</span>)
+    (org-bibtex <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">~/Org/popineau/Publications-journal-temp.bib</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">journal+EIAH|journal+IR|crossref</span><span style="color:#e6db74">&#34;</span>)
+    (<span style="color:#a6e22e">call-process</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">bib2bib.exe</span><span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">nil</span> (<span style="color:#a6e22e">get-buffer-create</span> (<span style="color:#a6e22e">make-temp-name</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">*bib2bib-*</span><span style="color:#e6db74">&#34;</span>)) <span style="color:#66d9ef">nil</span>
+                  <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">-c</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">keywords : </span><span style="color:#e6db74">\&#34;</span><span style="color:#e6db74">EIAH</span><span style="color:#e6db74">\\</span><span style="color:#e6db74">|IR</span><span style="color:#e6db74">\&#34;</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">--expand-xrefs</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">-ob</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">popineau/Publications-journal.bib</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">popineau/Publications-journal-temp.bib</span><span style="color:#e6db74">&#34;</span>)
+    (org-bibtex <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">~/Org/popineau/Publications-inbook-temp.bib</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">inbook+EIAH|inbook+IR|crossref</span><span style="color:#e6db74">&#34;</span>)
+    (<span style="color:#a6e22e">call-process</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">bib2bib.exe</span><span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">nil</span> (<span style="color:#a6e22e">get-buffer-create</span> (<span style="color:#a6e22e">make-temp-name</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">*bib2bib-*</span><span style="color:#e6db74">&#34;</span>)) <span style="color:#66d9ef">nil</span>
+                  <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">-c</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">keywords : </span><span style="color:#e6db74">\&#34;</span><span style="color:#e6db74">EIAH</span><span style="color:#e6db74">\\</span><span style="color:#e6db74">|IR</span><span style="color:#e6db74">\&#34;</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">--expand-xrefs</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">-ob</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">popineau/Publications-inbook.bib</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">popineau/Publications-inbook-temp.bib</span><span style="color:#e6db74">&#34;</span>)
+    (org-bibtex <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">~/Org/popineau/Publications-conf-temp.bib</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">conf+EIAH|conf+IR|crossref</span><span style="color:#e6db74">&#34;</span>)
+    (<span style="color:#a6e22e">call-process</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">bib2bib.exe</span><span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">nil</span> (<span style="color:#a6e22e">get-buffer-create</span> (<span style="color:#a6e22e">make-temp-name</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">*bib2bib-*</span><span style="color:#e6db74">&#34;</span>)) <span style="color:#66d9ef">nil</span>
+                  <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">-c</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">keywords : </span><span style="color:#e6db74">\&#34;</span><span style="color:#e6db74">EIAH</span><span style="color:#e6db74">\\</span><span style="color:#e6db74">|IR</span><span style="color:#e6db74">\&#34;</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">--expand-xrefs</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">-ob</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">popineau/Publications-conf.bib</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">popineau/Publications-conf-temp.bib</span><span style="color:#e6db74">&#34;</span>)
+    (org-bibtex <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">~/Org/popineau/Publications-poster-temp.bib</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">poster+EIAH|poster+IR|crossref</span><span style="color:#e6db74">&#34;</span>)
+    (<span style="color:#a6e22e">call-process</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">bib2bib.exe</span><span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">nil</span> (<span style="color:#a6e22e">get-buffer-create</span> (<span style="color:#a6e22e">make-temp-name</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">*bib2bib-*</span><span style="color:#e6db74">&#34;</span>)) <span style="color:#66d9ef">nil</span>
+                  <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">-c</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">keywords : </span><span style="color:#e6db74">\&#34;</span><span style="color:#e6db74">EIAH</span><span style="color:#e6db74">\\</span><span style="color:#e6db74">|IR</span><span style="color:#e6db74">\&#34;</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">--expand-xrefs</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">-ob</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">popineau/Publications-poster.bib</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">popineau/Publications-poster-temp.bib</span><span style="color:#e6db74">&#34;</span>)
     )
-  (mapcar #'(lambda (f) (ignore-errors (delete-file f)))
-          '(&quot;~/Org/popineau/Publications-journal-temp.bib&quot;
-            &quot;~/Org/popineau/Publications-inbook-temp.bib&quot;
-            &quot;~/Org/popineau/Publications-conf-temp.bib&quot;
-            &quot;~/Org/popineau/Publications-poster-temp.bib&quot;))
-  ;; (mapcar #'(lambda (f) (rename-file f (expand-file f &quot;popineau/&quot;))) (directory-files &quot;.&quot; nil &quot;^Publications.*\.html$&quot;)
+  (<span style="color:#a6e22e">mapcar</span> <span style="color:#a6e22e">#&#39;</span>(lambda (f) (ignore-errors (<span style="color:#a6e22e">delete-file</span> f)))
+          <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">~/Org/popineau/Publications-journal-temp.bib</span><span style="color:#e6db74">&#34;</span>
+            <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">~/Org/popineau/Publications-inbook-temp.bib</span><span style="color:#e6db74">&#34;</span>
+            <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">~/Org/popineau/Publications-conf-temp.bib</span><span style="color:#e6db74">&#34;</span>
+            <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">~/Org/popineau/Publications-poster-temp.bib</span><span style="color:#e6db74">&#34;</span>))
+  <span style="color:#75715e">;; (mapcar #&#39;(lambda (f) (rename-file f (expand-file f &#34;popineau/&#34;))) (directory-files &#34;.&#34; nil &#34;^Publications.*\.html$&#34;)</span>
 
   )
-</code></pre>
-
-<h2 id="main-publications">Main publications</h2>
-
+</code></pre></div><h2 id="main-publications">Main publications</h2>
 <h3 id="journal-articles">Journal articles</h3>
-
 <div id="bibliography">
 <h2>Références</h2>
-
 <table>
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="Vie2016c">1</a>]
@@ -183,11 +175,8 @@ Jill-Jênn Vie, Fabrice Popineau, Éric Bruillard, and Yolaine Bourda.
   crowdsourcing.
  <em>STICEF</em>, pages 1--18, 2017.
 [&nbsp;<a href="/mnt/c/Temp/Publications-journal_bib.html#Vie2016c">bib</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="Kacimi2017">2</a>]
@@ -197,11 +186,8 @@ Youssef Meguebli, Mouna Kacimi, Bich-Liên Doan, and Fabrice Popineau.
  Towards better news article recommendation.
  <em>World Wide Web Journal</em>, 20(1):1--20, 2017.
 [&nbsp;<a href="/mnt/c/Temp/Publications-journal_bib.html#Kacimi2017">bib</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="Vie2017b">3</a>]
@@ -213,19 +199,14 @@ Jill-Jênn Vie, Fabrice Popineau, Éric Bruillard, and Yolaine Bourda.
  <em>International Journal of Artificial Intelligence in Education</em>,
   pages 1--17, 2017.
 [&nbsp;<a href="/mnt/c/Temp/Publications-journal_bib.html#Vie2017b">bib</a>&nbsp;]
-
 </td>
 </tr>
 </table>
 </div>
-
 <h3 id="book-chapters">Book chapters</h3>
-
 <div id="bibliography">
 <h2>Références</h2>
-
 <table>
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="vie2017review">1</a>]
@@ -238,19 +219,14 @@ Jill-Jênn Vie, Fabrice Popineau, Éric Bruillard, and Yolaine Bourda.
   Decision and Control</em>, chapter A review of recent advances in adaptive
   assessment, pages 113--142. Springer, 2017.
 [&nbsp;<a href="/mnt/c/Temp/Publications-inbook_bib.html#vie2017review">bib</a>&nbsp;]
-
 </td>
 </tr>
 </table>
 </div>
-
 <h3 id="conferences">Conferences</h3>
-
 <div id="bibliography">
 <h2>Références</h2>
-
 <table>
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="DBLP:conf/ectel/ViePBB16">1</a>]
@@ -265,11 +241,8 @@ Jill-Jênn Vie, Fabrice Popineau, Yolaine Bourda, and Éric Bruillard.
   International Publishing.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#DBLP:conf/ectel/ViePBB16">bib</a>&nbsp;|
 <a href="http://dx.doi.org/10.1007/978-3-319-45153-4_25">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="DBLP:conf/edm/ViePGBB15">2</a>]
@@ -288,11 +261,8 @@ Jill-Jênn Vie, Fabrice Popineau, Jean-Bastien Grill, Éric Bruillard, and
   Mining Society (IEDMS), 6 2015.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#DBLP:conf/edm/ViePGBB15">bib</a>&nbsp;|
 <a href="http://www.educationaldatamining.org/EDM2015/proceedings/poster618-619.pdf">.pdf</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="hajri:hal-01275267">3</a>]
@@ -308,11 +278,8 @@ Hiba Hajri, Yolaine Bourda, and Fabrice Popineau.
   Toledo, Spain, 9 2015. Springer.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#hajri:hal-01275267">bib</a>&nbsp;|
 <a href="https://hal.archives-ouvertes.fr/hal-01275267">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="DBLP:conf/um/MeguebliKDP14">4</a>]
@@ -327,11 +294,8 @@ Youssef Meguebli, Mouna Kacimi, Bich-Liên Doan, and Fabrice Popineau.
   7 2014.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#DBLP:conf/um/MeguebliKDP14">bib</a>&nbsp;|
 <a href="http://ceur-ws.org/Vol-1181/nra2014_paper_05.pdf">.pdf</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="DBLP:conf/ecir/MeguebliKDP14">5</a>]
@@ -347,11 +311,8 @@ Youssef Meguebli, Mouna Kacimi, Bich-Liên Doan, and Fabrice Popineau.
   2014.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#DBLP:conf/ecir/MeguebliKDP14">bib</a>&nbsp;|
 <a href="http://dx.doi.org/10.1007/978-3-319-06028-6_49">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="DBLP:conf/iva/PopineauDB14">6</a>]
@@ -366,11 +327,8 @@ Fabrice Popineau, Georges Dubus, and Yolaine Bourda.
   339--344, Boston, MA, USA, 8 2014. Springer.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#DBLP:conf/iva/PopineauDB14">bib</a>&nbsp;|
 <a href="http://dx.doi.org/10.1007/978-3-319-09767-1_44">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="DBLP:conf/socinfo/MeguebliKDP14">7</a>]
@@ -384,11 +342,8 @@ Youssef Meguebli, Mouna Kacimi, Bich-Liên Doan, and Fabrice Popineau.
   2014. Springer.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#DBLP:conf/socinfo/MeguebliKDP14">bib</a>&nbsp;|
 <a href="http://dx.doi.org/10.1007/978-3-319-13734-6_19">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="DBLP:conf/ic3k/MeguebliKDP14">8</a>]
@@ -402,11 +357,8 @@ Youssef Meguebli, Mouna Kacimi, Bich-Li&ecirc;n Doan, and Fabrice Popineau.
   SciTePress.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#DBLP:conf/ic3k/MeguebliKDP14">bib</a>&nbsp;|
 <a href="http://dx.doi.org/10.5220/0005081702500260">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="meguebli:hal-01105313">9</a>]
@@ -419,11 +371,8 @@ Youssef Meguebli, Mouna Kacimi, Bich-Liên Doan, and Fabrice Popineau.
   Information Retrieval</em>, pages 473--479, Rome, Italy, 10 2014. SciTePress.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#meguebli:hal-01105313">bib</a>&nbsp;|
 <a href="https://hal-supelec.archives-ouvertes.fr/hal-01105313">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="DBLP:conf/iat/DubusPBS13">10</a>]
@@ -438,11 +387,8 @@ Georges Dubus, Fabrice Popineau, Yolaine Bourda, and Jean-Paul Sansonnet.
   Society.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#DBLP:conf/iat/DubusPBS13">bib</a>&nbsp;|
 <a href="http://dx.doi.org/10.1109/WI-IAT.2013.105">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="meguebli:hal-00765342">11</a>]
@@ -456,11 +402,8 @@ Youssef Meguebli, Bich-Liên Doan, Fabrice Popineau, and Yolaine Bourda.
   United States, 10 2012. ACM.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#meguebli:hal-00765342">bib</a>&nbsp;|
 <a href="http://hal-supelec.archives-ouvertes.fr/hal-00765342">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="DBLP:conf/isda/DubusPB11">12</a>]
@@ -475,11 +418,8 @@ Georges Dubus, Fabrice Popineau, and Yolaine Bourda.
   ISDA 2011</em>, pages 569--574, C&oacute;rdoba, Spain, 11 2011. IEEE.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#DBLP:conf/isda/DubusPB11">bib</a>&nbsp;|
 <a href="http://dx.doi.org/10.1109/ISDA.2011.6121716">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="dubus:hal-00646744">13</a>]
@@ -492,11 +432,8 @@ Georges Dubus, Fabrice Popineau, and Yolaine Bourda.
   IEEE Computer Society.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#dubus:hal-00646744">bib</a>&nbsp;|
 <a href="http://hal-supelec.archives-ouvertes.fr/hal-00646744">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="zemirline:hal-00431319">14</a>]
@@ -508,11 +445,8 @@ Nadjet Zemirline, Yolaine Bourda, Chantal Reynaud, and Fabrice Popineau.
   page 3 pages, Amsterdam, Netherlands, 6 2009.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#zemirline:hal-00431319">bib</a>&nbsp;|
 <a href="http://hal-supelec.archives-ouvertes.fr/hal-00431319">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="zemirline:hal-00322325">15</a>]
@@ -526,11 +460,8 @@ Nadjet Zemirline, Yolaine Bourda, Chantal Reynaud, and Fabrice Popineau.
   7 2008. Springer Berlin / Heidelberg.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#zemirline:hal-00322325">bib</a>&nbsp;|
 <a href="http://hal-supelec.archives-ouvertes.fr/hal-00322325">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="zemirline:hal-00334994">16</a>]
@@ -546,11 +477,8 @@ Nadjet Zemirline, Chantal Reynaud, Yolaine Bourda, and Fabrice Popineau.
   Springer-Verlag.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#zemirline:hal-00334994">bib</a>&nbsp;|
 <a href="http://hal-supelec.archives-ouvertes.fr/hal-00334994">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="DBLP:conf/ah/JacquiotBPDR06">17</a>]
@@ -566,11 +494,8 @@ Cédric Jacquiot, Yolaine Bourda, Fabrice Popineau, Alexandre Delteil, and
   pages 131--140. Springer-Verlag, 6 2006.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#DBLP:conf/ah/JacquiotBPDR06">bib</a>&nbsp;|
 <a href="http://dx.doi.org/10.1007/11768012_15">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau:018">18</a>]
@@ -585,11 +510,8 @@ Cédric Jacquiot, Yolaine Bourda, and Fabrice Popineau.
  Lugano, Switzerland.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#popineau:018">bib</a>&nbsp;|
 <a href="http://www.springerlink.com/index/GUNNTDN4G9J4QQ32.pdf">.pdf</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="DBLP:conf/icwe/JacquiotBP04">19</a>]
@@ -602,11 +524,8 @@ Cédric Jacquiot, Yolaine Bourda, and Fabrice Popineau.
   4th International Conference on Web Engineering (ICWE 2004)</em>, pages
   199--209, Munich, Germany, 7 2004. Rinton Press.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#DBLP:conf/icwe/JacquiotBP04">bib</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="DBLP:conf/ah/JacquiotBP04">20</a>]
@@ -621,19 +540,14 @@ Cédric Jacquiot, Yolaine Bourda, and Fabrice Popineau.
   <em>Lecture Notes in Computer Science</em>, pages 413--416. Springer, 8 2004.
 [&nbsp;<a href="/mnt/c/Temp/Publications-conf_bib.html#DBLP:conf/ah/JacquiotBP04">bib</a>&nbsp;|
 <a href="http://dx.doi.org/10.1007/978-3-540-27780-4_63">http</a>&nbsp;]
-
 </td>
 </tr>
 </table>
 </div>
-
 <h3 id="posters">Posters</h3>
-
 <div id="bibliography">
 <h2>Références</h2>
-
 <table>
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="Vie:2017:HML:3051457.3054015">1</a>]
@@ -647,11 +561,8 @@ Jill-J&ecirc;nn Vie, Fabrice Popineau, Fran&ccedil;oise Tort, Benjamin Marteau, 
   Scale</em>, L@S '17, pages 323--326, New York, NY, USA, 2017. ACM.
 [&nbsp;<a href="/mnt/c/Temp/Publications-poster_bib.html#Vie:2017:HML:3051457.3054015">bib</a>&nbsp;|
 <a href="http://doi.acm.org/10.1145/3051457.3054015">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="vie:hal-01275277">2</a>]
@@ -665,11 +576,8 @@ Jill-Jênn Vie, Fabrice Popineau, Jean-Bastien Grill, Eric Bruillard, and
   Informatiques, EIAH 2015</em>, Agadir, Morocco, 6 2015.
 [&nbsp;<a href="/mnt/c/Temp/Publications-poster_bib.html#vie:hal-01275277">bib</a>&nbsp;|
 <a href="https://hal.archives-ouvertes.fr/hal-01275277">http</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau:016">3</a>]
@@ -681,11 +589,8 @@ Cédric Jacquiot, Yolaine Bourda, and Fabrice Popineau.
   on Hypertext and Hypermedia.</em> ACM, 8 2003.
  Nottingham, UK.
 [&nbsp;<a href="/mnt/c/Temp/Publications-poster_bib.html#popineau:016">bib</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="DBLP:conf/icalt/PopineauBD03">4</a>]
@@ -699,28 +604,18 @@ Fabrice Popineau, Yolaine Bourda, and Bich-Liên Doan.
   IEEE Computer Society.
 [&nbsp;<a href="/mnt/c/Temp/Publications-poster_bib.html#DBLP:conf/icalt/PopineauBD03">bib</a>&nbsp;|
 <a href="http://dx.doi.org/10.1109/ICALT.2003.1215186">http</a>&nbsp;]
-
 </td>
 </tr>
 </table>
 </div>
-
 <h2 id="artificial-intelligence">Artificial Intelligence</h2>
-
-
-<figure>
-    <a href="http://www.pearson.fr/livre/?GCOI=27440100534680">
-        <img src="/ox-hugo/aima-fr.png" />
-    </a>
-    
+<figure><a href="http://www.pearson.fr/livre/?GCOI=27440100534680">
+    <img src="/ox-hugo/aima-fr.png"/> </a>
 </figure>
-
 
 <p>The leading textbook about artificial intelligence by Stuart Russell and Peter Norvig has been translated to French.
 I supervised the French translation of the 2nd and 3rd editions together with Laurent Miclet.</p>
-
 <p>The translation by itself has been achieved by a pool of professional translators. It has been a tremendous work at all levels:</p>
-
 <ul>
 <li>splitting the translation job and providing translators with the technical vocabulary they missed,</li>
 <li>gathering translated parts and polishing the result,</li>
@@ -732,35 +627,21 @@ so on,</li>
 Only PDFTeX could allow to adjust precisely the layout without exceeding
 the number of pages (thicker, it would have required 2 volumes).</li>
 </ul>
-
-<p></div></p>
-
+</div>
 <h2 id="tex-related-publications-presentations-and-seminars"><span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span> related publications, presentations and seminars</h2>
-
 <p>Up to around 2005, I have devoted a great part of my research time to <span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span>, resulting in a few <span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span> related publications.</p>
-
 <p>I have maintained the <a href="http://tug.org/texlive/">TeXLive</a> distribution of <span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span> for Windows for about 10 years.
 This was a demanding but rewarding collaborative work.</p>
-
 <p>I have (co-)organized the <a href="https://www.tug.org/TUGboat/Contents/contents27-0.html">2005 EuroTeX</a> meeting in Pont-à-Mousson with Donald E. Knuth and Hermann Zapf as guests.
 The <a href="https://www.tug.org/TUGboat/tb27-0/tb85complete.pdf">full proceedings</a> of the conference are available online.</p>
-
-
 <figure>
-    
-        <img src="http:/ox-hugo/DEK&#43;Zapf.jpg" />
-    
-    
+    <img src="http:/ox-hugo/DEK&#43;Zapf.jpg"/> 
 </figure>
 
-
 <h3 id="references">References</h3>
-
 <div id="bibliography">
 <h2>Références</h2>
-
 <table>
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau2004TDS">1</a>]
@@ -771,11 +652,8 @@ Fabrice Popineau.
  <em>Cahiers GUTenberg</em>, (44--45):83--114, 2004.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau2004TDS">bib</a>&nbsp;|
 <a href="http://cahiers.gutenberg.eu.org/cg-bin/article/CG_2004___44-45_83_0.pdf">.pdf</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau:013">2</a>]
@@ -786,11 +664,8 @@ Sebastian Rahtz and Fabrice Popineau.
  28. Mitgliederversammlung von DANTE e.V., 4 2003.
  Bremen, Germany.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau:013">bib</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau2003xemtex">3</a>]
@@ -801,11 +676,8 @@ Marie-Louise Chaix and Fabrice Popineau.
  <em>TUGBoat</em>, 24(3):415--419, 6 2003.
  Proceedings of the Euro<span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span> 2003 Conference, Brest, France.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau2003xemtex">bib</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau:015">4</a>]
@@ -817,11 +689,8 @@ Marie-Louise Chaix and Fabrice Popineau.
  TUG 2003, 24th Annual Conference of the <span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span> Users Group, Outrigger
   Waikoloa Beach, Hawaii, USA, 7 2003.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau:015">bib</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau:011">5</a>]
@@ -831,11 +700,8 @@ Fabrice Popineau.
  Status and future of <span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span>live.
  26. Mitgliederversammlung von DANTE e.V., 2 2002.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau:011">bib</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau2002texlive">6</a>]
@@ -846,11 +712,8 @@ Fabrice Popineau.
  <em>TUGBoat</em>, 23(1):74--79, 9 2002.
  Proceedings of the TUG 2002 Conference, Trivandrum, India.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau2002texlive">bib</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau2001directions">7</a>]
@@ -863,11 +726,8 @@ Fabrice Popineau.
   Netherlands.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau2001directions">bib</a>&nbsp;|
 <a href="https://www.ntg.nl/maps/26/20.pdf">.pdf</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau2001GUST">8</a>]
@@ -878,11 +738,8 @@ Fabrice Popineau.
  <em>Biuletyn GUST</em>, (17):17--23, 2001.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau2001GUST">bib</a>&nbsp;|
 <a href="ftp://ftp.gust.org.pl/pub/GUST/bulletin/17/popineau01.ps.gz">.ps.gz</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau:009">9</a>]
@@ -893,11 +750,8 @@ Fabrice Popineau.
  <em>Cahiers GUTenberg</em>, (41):167--175, 2001.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau:009">bib</a>&nbsp;|
 <a href="http://cahiers.gutenberg.eu.org/cg-bin/article/CG_2001___41_167_0.pdf">.pdf</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau:010">10</a>]
@@ -909,11 +763,8 @@ Fabrice Popineau and Stanislaw Wawrykiewicz.
   Współczesne <span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span>niki publikacyjne (Contemporary Publishing <span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span>nology),
   Bachotek, Poland, 4 2001.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau:010">bib</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau2000affichez">11</a>]
@@ -924,11 +775,8 @@ Fabrice Popineau.
  <em>Cahiers GUTenberg</em>, (37--38):5--43, 2000.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau2000affichez">bib</a>&nbsp;|
 <a href="http://cahiers.gutenberg.eu.org/cg-bin/article/CG_2000___37-38_5_0.pdf">.pdf</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau1999fptexTUG">12</a>]
@@ -941,11 +789,8 @@ Fabrice Popineau.
   Vancouver.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau1999fptexTUG">bib</a>&nbsp;|
 <a href="https://www.tug.org/TUGboat/tb20-3/tb64popin.pdf">.pdf</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau1999fptexGUT">13</a>]
@@ -957,11 +802,8 @@ Fabrice Popineau.
  Actes GUT'99, 18 -- 20 mai, Lyon.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau1999fptexGUT">bib</a>&nbsp;|
 <a href="http://cahiers.gutenberg.eu.org/cg-bin/article/CG_1999___32_47_0.pdf">.pdf</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau:005">14</a>]
@@ -971,11 +813,8 @@ Fabrice Popineau.
  Uk-tug special win32 meeting, 5 1999.
  First public presentation of fp<span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span>.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau:005">bib</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau1998windvi">15</a>]
@@ -986,11 +825,8 @@ Fabrice Popineau.
  <em>MAPS</em>, 20:146--149, 1998.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau1998windvi">bib</a>&nbsp;|
 <a href="https://www.ntg.nl/maps/20/29.pdf">.pdf</a>&nbsp;]
-
 </td>
 </tr>
-
-
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau1997rapidite">16</a>]
@@ -1002,7 +838,6 @@ Fabrice Popineau.
  Actes de GUT’97, Strasbourg.
 [&nbsp;<a href="/mnt/c/Temp/Publications-TeXLive_bib.html#popineau1997rapidite">bib</a>&nbsp;|
 <a href="http://cahiers.gutenberg.eu.org/cg-bin/article/CG_1997___26_96_0.pdf">.pdf</a>&nbsp;]
-
 </td>
 </tr>
 </table>
