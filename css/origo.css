@@ -40,12 +40,12 @@ html {
 }
 
 body{
-    /* grid-template-columns: auto 1fr auto auto; */
-    /* grid-template-rows: auto minmax(20vh, 240px) auto auto; */
-    /* grid-template-areas: "lmargin header header rmargin" */
-    /*                      "lmargin logo logo rmargin" */
-    /*                      "lmargin menu main rmargin" */
-    /*                      "lmargin footer main rmargin"; */
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-rows: auto minmax(20vh, 240px) auto auto;
+    grid-template-areas: "lmargin header header rmargin"
+                         "lmargin logo logo rmargin"
+                         "lmargin menu main rmargin"
+                         "lmargin footer main rmargin";
     /* FIXME: why that? */
     margin: 2vh auto 0; 
     width: 100%;
@@ -134,7 +134,7 @@ body{
     body {
     display: grid;
         grid-gap:1vw;
-        grid-template-columns: 200px 1fr 5fr 200px;
+        grid-template-columns: 15vw 1fr 5fr 15vw;
         grid-template-areas: "lmargin header header rmargin"
                              "lmargin logo   logo   rmargin"
                              "lmargin menu   main   rmargin"
@@ -176,7 +176,8 @@ h1,h2,h3 {color:#d06060; font-weight:400; line-height:1.2em; font-family:'Econom
 }
 
 .selfie {
-    width: max(25%, 10vw);
+    min-width: 10vw;
+    width: 25%;
     /* height: max(25%, 10vw); */
     border-radius: 50%;
     display:inline-block;
@@ -322,7 +323,7 @@ h1 {
 }
 
 .center-cropped {
-    /* width: 100vw; */
+    width: 100%;
     /* height: minmax(20vh, 240px); */
     height: 20vh;
     background-position: center center;
@@ -335,6 +336,7 @@ h1 {
 .center-cropped img {
     min-height: 100%;
     min-width: 100%;
+    max-width: 100%;
     /* IE 8 */
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     /* IE 5-7 */
