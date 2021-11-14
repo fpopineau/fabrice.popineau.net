@@ -25,7 +25,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fabrice.popineau.net/publications/</guid>
-      <description>(save-excursion (ignore-errors (load-library &amp;#34;org-bibtex&amp;#34;) (switch-to-buffer (find-file-noselect &amp;#34;~/Org/popineau/Publications.org&amp;#34;)) (org-bibtex &amp;#34;~/Org/popineau/Publications-TeXLive.bib&amp;#34; &amp;#34;TeX&amp;#34;) (org-bibtex &amp;#34;~/Org/popineau/Publications-journal-temp.bib&amp;#34; &amp;#34;journal+EIAH|journal+IR|crossref&amp;#34;) (call-process &amp;#34;bib2bib.exe&amp;#34; nil (get-buffer-create (make-temp-name &amp;#34;*bib2bib-*&amp;#34;)) nil &amp;#34;-c&amp;#34; &amp;#34;keywords : \&amp;#34;EIAH\\|IR\&amp;#34;&amp;#34; &amp;#34;--expand-xrefs&amp;#34; &amp;#34;-ob&amp;#34; &amp;#34;popineau/Publications-journal.bib&amp;#34; &amp;#34;popineau/Publications-journal-temp.bib&amp;#34;) (org-bibtex &amp;#34;~/Org/popineau/Publications-inbook-temp.bib&amp;#34; &amp;#34;inbook+EIAH|inbook+IR|crossref&amp;#34;) (call-process &amp;#34;bib2bib.exe&amp;#34; nil (get-buffer-create (make-temp-name &amp;#34;*bib2bib-*&amp;#34;)) nil &amp;#34;-c&amp;#34; &amp;#34;keywords : \&amp;#34;EIAH\\|IR\&amp;#34;&amp;#34; &amp;#34;--expand-xrefs&amp;#34; &amp;#34;-ob&amp;#34; &amp;#34;popineau/Publications-inbook.bib&amp;#34; &amp;#34;popineau/Publications-inbook-temp.bib&amp;#34;) (org-bibtex &amp;#34;~/Org/popineau/Publications-conf-temp.bib&amp;#34; &amp;#34;conf+EIAH|conf+IR|crossref&amp;#34;) (call-process &amp;#34;bib2bib.exe&amp;#34; nil (get-buffer-create (make-temp-name &amp;#34;*bib2bib-*&amp;#34;)) nil &amp;#34;-c&amp;#34; &amp;#34;keywords : \&amp;#34;EIAH\\|IR\&amp;#34;&amp;#34; &amp;#34;--expand-xrefs&amp;#34; &amp;#34;-ob&amp;#34; &amp;#34;popineau/Publications-conf.bib&amp;#34; &amp;#34;popineau/Publications-conf-temp.bib&amp;#34;) (org-bibtex &amp;#34;~/Org/popineau/Publications-poster-temp.bib&amp;#34; &amp;#34;poster+EIAH|poster+IR|crossref&amp;#34;) (call-process &amp;#34;bib2bib.exe&amp;#34; nil (get-buffer-create (make-temp-name &amp;#34;*bib2bib-*&amp;#34;)) nil &amp;#34;-c&amp;#34; &amp;#34;keywords : \&amp;#34;EIAH\\|IR\&amp;#34;&amp;#34; &amp;#34;--expand-xrefs&amp;#34; &amp;#34;-ob&amp;#34; &amp;#34;popineau/Publications-poster.</description>
+      <description>(save-excursion (ignore-errors (load-library &amp;#34;org-bibtex&amp;#34;) (switch-to-buffer (find-file-noselect &amp;#34;~/Org/popineau/Publications.org&amp;#34;)) (org-bibtex &amp;#34;~/Org/popineau/Publications-TeXLive.bib&amp;#34; &amp;#34;TeX&amp;#34;) (org-bibtex &amp;#34;~/Org/popineau/Publications-journal-temp.bib&amp;#34; &amp;#34;journal+EIAH|journal+IR|crossref&amp;#34;) (call-process &amp;#34;bib2bib.exe&amp;#34; nil (get-buffer-create (make-temp-name &amp;#34;*bib2bib-*&amp;#34;)) nil &amp;#34;-c&amp;#34; &amp;#34;keywords : \&amp;#34;EIAH\\|IR\&amp;#34;&amp;#34; &amp;#34; &amp;#34; &amp;#34;-ob&amp;#34; &amp;#34;popineau/Publications-journal.bib&amp;#34; &amp;#34;popineau/Publications-journal-temp.bib&amp;#34;) (org-bibtex &amp;#34;~/Org/popineau/Publications-inbook-temp.bib&amp;#34; &amp;#34;inbook+EIAH|inbook+IR|crossref&amp;#34;) (call-process &amp;#34;bib2bib.exe&amp;#34; nil (get-buffer-create (make-temp-name &amp;#34;*bib2bib-*&amp;#34;)) nil &amp;#34;-c&amp;#34; &amp;#34;keywords : \&amp;#34;EIAH\\|IR\&amp;#34;&amp;#34; &amp;#34;--expand-xrefs&amp;#34; &amp;#34;-ob&amp;#34; &amp;#34;popineau/Publications-inbook.bib&amp;#34; &amp;#34;popineau/Publications-inbook-temp.bib&amp;#34;) (org-bibtex &amp;#34;~/Org/popineau/Publications-conf-temp.bib&amp;#34; &amp;#34;conf+EIAH|conf+IR|crossref&amp;#34;) (call-process &amp;#34;bib2bib.exe&amp;#34; nil (get-buffer-create (make-temp-name &amp;#34;*bib2bib-*&amp;#34;)) nil &amp;#34;-c&amp;#34; &amp;#34;keywords : \&amp;#34;EIAH\\|IR\&amp;#34;&amp;#34; &amp;#34;--expand-xrefs&amp;#34; &amp;#34;-ob&amp;#34; &amp;#34;popineau/Publications-conf.bib&amp;#34; &amp;#34;popineau/Publications-conf-temp.bib&amp;#34;) (org-bibtex &amp;#34;~/Org/popineau/Publications-poster-temp.bib&amp;#34; &amp;#34;poster+EIAH|poster+IR|crossref&amp;#34;) (call-process &amp;#34;bib2bib.exe&amp;#34; nil (get-buffer-create (make-temp-name &amp;#34;*bib2bib-*&amp;#34;)) nil &amp;#34;-c&amp;#34; &amp;#34;keywords : \&amp;#34;EIAH\\|IR\&amp;#34;&amp;#34; &amp;#34;--expand-xrefs&amp;#34; &amp;#34;-ob&amp;#34; &amp;#34;popineau/Publications-poster.</description>
     </item>
     
     <item>
@@ -34,11 +34,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fabrice.popineau.net/teaching/</guid>
-      <description>Current Courses since 2018 &amp;ndash; Cours Algorithmique et Complexité. CentraleSupelec, campus de Gif.
-since 2016 &amp;ndash; Big Data. CentraleSupelec, campus de Gif, parcours ingénieur Supélec.
-since 2012 &amp;ndash; Modèles du Calcul. Cours de 3ème année Majeure Informatique. CentraleSupelec, campus de Gif, parcours ingénieur Supélec.
-since 2010 &amp;ndash; Intelligence Artificielle. Mineure de 3ème année. CentraleSupelec, campus de Gif, parcours ingénieur Supélec.
-Others : Formation continue : CQP / Master ASI - Développement d&amp;rsquo;applications Web en environnement .</description>
+      <description>Current Courses since 2018 &amp;ndash; Algorithmics and Complexity. 1st year course. CentraleSupélec, Paris-Saclay campus.
+since 2019 &amp;ndash; Artificial Intelligence. 2nd year elective course. CentraleSupélec, Paris-Saclay campus.
+since 2020 &amp;ndash; Knowledge Representation and Reasoning. 3rd year specialization course, together with Prof. Yolaine Bourda, Paris-Saclay campus.
+since 2020 &amp;ndash; Automata and Languages Theory. 3rd year course, together with Prof. Pascale Le Gall and Marc Aiguier, Paris-Saclay campus.
+since 2020 &amp;ndash; Logic modelling. 3rd year course, together with Prof.</description>
     </item>
     
     <item>
@@ -47,7 +47,7 @@ Others : Formation continue : CQP / Master ASI - Développement d&amp;rsquo;appl
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fabrice.popineau.net/cv/</guid>
-      <description>You can download my Resume / Vita / C.V. / Curriculum Vitae.</description>
+      <description>rd year option of Supelec about _[Computer Science and Knowledge Engineering](http://www.metz.supelec.fr/metz/fi/iic/Welcome.html)_ from 2005 to 2010.In 2010, I joined the Gif/Yvette campus of Supélec.In 2015, École Centrale de Paris and Supélec merged into CentraleSupelec,and I am now a member of the [LAHDAK](https://www.lri.fr/lahdak) team of the [LRI](https://www.lri.fr).I have recently been appointed by [AFNOR](https://norminfo.afnor.org/structure/afnorcn-jtc1sc-42/intelligence-artificielle/127690)as an expert member of the French National Body for [ISO/JTC1 SC42 on Artificial Intelligence](https://www.iso.org/committee/6794475.html). --You can download my Resume / Vita / C.</description>
     </item>
     
     <item>
@@ -57,7 +57,7 @@ Others : Formation continue : CQP / Master ASI - Développement d&amp;rsquo;appl
       
       <guid>https://fabrice.popineau.net/contact/</guid>
       <description>You can contact me at:
-CentraleSupelec           tel : +33 (0) 169851950   mail : fabrice dot popineau     at centralesupelec dot fr   location : Desk D2.21     Computer Science department     CentraleSupélec     Plateau de Moulon     3, rue Joliot-Curie     F-91190 Gif-sur-Yvette, FRANCE    LRI           tel : +33 (0) 169851950   mail : fabrice dot popineau at lri dot fr   location : Desk 134/PCRI-S     Laboratoire de Recherche en Informatique     Bâtiment 650 Ada Lovelace     rue Noetzlin     F-91190 Gif-sur-Yvette, FRANCE     Werbung: pureblack.</description>
+CentraleSupelec           tel : +33 (0) 169851950   mail : fabrice dot popineau     at centralesupelec dot fr   location : Desk D2.21     Computer Science department     CentraleSupélec     Plateau de Moulon     3, rue Joliot-Curie     F-91190 Gif-sur-Yvette, FRANCE    LRI           tel : +33 (0) 169851950   mail : fabrice dot popineau at lisn dot fr   location : Desk 134/PCRI-S     Laboratoire de Recherche en Informatique     Bâtiment 650 Ada Lovelace     rue Noetzlin     F-91190 Gif-sur-Yvette, FRANCE     Werbung: pureblack.</description>
     </item>
     
     <item>
@@ -66,7 +66,8 @@ CentraleSupelec           tel : +33 (0) 169851950   mail : fabrice dot popineau 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fabrice.popineau.net/publications-main/</guid>
-      <description>Journal articles [1]Jill-J&amp;ecirc;nn Vie, Fabrice Popineau, Eric Bruillard, and Yolaine Bourda.Simulation et validation de tests adaptatifs dans les mooc.Sciences et Technologies de l&#39;Information et de la Communicationpour l&#39;&amp;Eacute;ducation et la Formation, 24(2):149-167, 2017.[&amp;nbsp;bib&amp;nbsp;][2]Youssef Meguebli, Mouna Kacimi, Bich-Liên Doan, and Fabrice Popineau.Towards better news article recommendation.World Wide Web Journal, 20(1):1-20, 2017.[&amp;nbsp;bib&amp;nbsp;][3]Jill-Jênn Vie, Fabrice Popineau, Éric Bruillard, and Yolaine Bourda.</description>
+      <description> --
+(Top of the page) , --,,,In , (editors),,Technical report ,,,,(),pages ,,.. ----[bib]-- </description>
     </item>
     
     <item>
@@ -75,9 +76,9 @@ CentraleSupelec           tel : +33 (0) 169851950   mail : fabrice dot popineau 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fabrice.popineau.net/publications-books/</guid>
-      <description>The leading textbook about artificial intelligence by Stuart Russell and Peter Norvig has been translated to French. I supervised the French translation of the 2nd and 3rd editions together with Laurent Miclet.
-The translation by itself has been achieved by a pool of professional translators. It has been a tremendous work at all levels:
- splitting the translation job and providing translators with the technical vocabulary they missed, gathering translated parts and polishing the result, carefully proofreading the text (3 times!</description>
+      <description>   The leading textbook about artificial intelligence by Stuart Russell and Peter Norvig has been translated to French. I supervised and participated to the French translation of the 2nd, 3rd and 4th editions together with Laurent Miclet.
+The 4th edition has benefited of careful and professional polishing and proofreading by Claire Cadet and the team in charge at Pearson France.
+ </description>
     </item>
     
     <item>

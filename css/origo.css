@@ -168,6 +168,10 @@ h1,h2,h3 {color:#d06060; font-weight:400; line-height:1.2em; font-family:'Econom
 
 #button1 {grid-area: button; width: 20px; }
 
+#bibtex_display h1 {font-size:1.6em; margin:0 0 5px 0; display:inline;}
+
+.collapse {display: none;}
+
 .header-selfie {
     grid-area: header;
     grid-column-start: 3;
