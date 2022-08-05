@@ -597,6 +597,7 @@ function BibtexDisplay() {
             } else if (key == "PAGES") {
                 value = value.replace("--", "-");
             } else if (key == "DATE") {
+                console.log(value);
                 value = moment(value).format("MMM. YYYY");
             } else if (key == "URL") {
                 value = value.replace(/\\url/g, '');
@@ -644,7 +645,15 @@ function BibtexDisplay() {
             } else if (keyUpper == "YEAR") {
                 var getYearFromDate = x => {
                     if ("DATE" in x) {
-                        return moment(x["DATE"]).format("YYYY");
+                        if (x["DATE"].match(/^[0-9]{4}/)) {
+                            return x["DATE"];
+                        }
+                        else if (x["DATE"].match(/^[0-9]{4}-[0-9]{2}/)) {
+                            return x["DATE"].substring(0,4);
+                        }
+                        else {
+                            return moment(x["DATE"]).format("YYYY");
+                        }
                     }
                     return "";
                 }

@@ -160,7 +160,6 @@
     <!-- ## Journal articles {#journal-articles} -->
 <div   id="bibliography">
 
-<!-- <bibtex src="/ox-hugo/Conferences.bib"></bibtex> -->
 <p><bibtex src="/ox-hugo/filtered-publications.bib"></bibtex></p>
 <div class="bibtex_structure">
   <div class="group year" extra="DESC number">
@@ -173,7 +172,7 @@
 </div>
 <!-- https://stackoverflow.com/questions/406230/regular-expression-to-match-a-line-that-doesnt-contain-a-word -->
 <!-- The non capturing one does not work? -->
-<div class="bibtex_display" keywords="^((?!TEX).)*$">
+<div class="bibtex_display" keywords="IR|EIAH">
   <div class="if bibtex_template" style="display: none;">
     <ul> <li>
       <!-- <span class="if journal !nolink">
@@ -197,19 +196,20 @@
         <span class="if booktitle">In <em><span class="booktitle"></span></em>,</span>
         <span class="if editor"><span class="editor"></span> (editors),</span>
         <span class="if publisher"><em><span class="publisher"></span></em>,</span>
-        <span class="if !journal number">Technical report <span class="number"></span>,</span>
+        <!-- <span class="if !journal number">Technical report <span class="number"></span>,</span> -->
         <span class="if institution"><span class="institution"></span>,</span>
         <span class="if address"><span class="address"></span>,</span>
         <span class="if volume"><span class="volume"></span>,</span>
         <span class="if journal number">(<span class="number"></span>),</span>
         <span class="if pages"> pages <span class="pages"></span>,</span>
+        <!-- <span class="if date"><span class="date"></span>.</span> -->
         <span class="if month"><span class="month"></span>,</span>
         <span class="if year"><span class="year"></span>.</span>
-        <!-- <span class="if note"><span class="note"></span>.</span> -->
+        <span class="if note"><span class="note"></span>.</span>
         <!-- <a class="bibtexVar" role="button" data-toggle="collapse" href="#bib+BIBTEXKEY+" aria-expanded="false" aria-controls="bib+BIBTEXKEY+" extra="BIBTEXKEY"> -->
-        <span class="if file">
+        <!-- <span class="if file">
           <a class="bibtexVar" href="+FILE+" extra="FILE">[file]</a>
-        </span>
+        </span> -->
         <a role="button" class="bibtexVar" id="button+BIBTEXKEY+" extra="BIBTEXKEY" onclick="getElementById('bib+BIBTEXKEY+').classList.toggle('collapse')">
 		  [bib]</a  >
 		<!-- </a> -->
