@@ -1,0 +1,80 @@
+
+Donate to arXiv
+
+Please join the Simons Foundation and our generous member organizations in supporting arXiv during our giving campaign September 23-27. 100% of your contribution will fund improvements and new initiatives to benefit arXiv's global scientific community.
+DONATE
+
+[secure site, no need to create account]
+Cornell University
+We gratefully acknowledge support from
+the Simons Foundation and member institutions.
+arXiv.org > cs > arXiv:1905.06873
+
+Help | Advanced Search
+Search
+Full-text links:
+Download:
+
+    PDF
+    Other formats
+
+Current browse context:
+cs.CY
+< prev  |  next >
+new  | recent  | 1905
+Change to browse by:
+cs
+cs.AI
+stat
+stat.AP
+stat.ML
+References & Citations
+
+    NASA ADS
+
+DBLP - CS Bibliography
+listing | bibtex
+Benoît Choffin
+Fabrice Popineau
+Yolaine Bourda
+Jill-Jênn Vie
+Export citation
+Google Scholar
+Bookmark
+BibSonomy logo Mendeley logo Reddit logo ScienceWISE logo
+Computer Science > Computers and Society
+Title: DAS3H: Modeling Student Learning and Forgetting for Optimally Scheduling Distributed Practice of Skills
+Authors: Benoît Choffin , Fabrice Popineau , Yolaine Bourda , Jill-Jênn Vie
+(Submitted on 14 May 2019)
+
+    Abstract: Spaced repetition is among the most studied learning strategies in the cognitive science literature. It consists in temporally distributing exposure to an information so as to improve long-term memorization. Providing students with an adaptive and personalized distributed practice schedule would benefit more than just a generic scheduler. However, the applicability of such adaptive schedulers seems to be limited to pure memorization, e.g. flashcards or foreign language learning. In this article, we first frame the research problem of optimizing an adaptive and personalized spaced repetition scheduler when memorization concerns the application of underlying multiple skills. To this end, we choose to rely on a student model for inferring knowledge state and memory dynamics on any skill or combination of skills. We argue that no knowledge tracing model takes both memory decay and multiple skill tagging into account for predicting student performance. As a consequence, we propose a new student learning and forgetting model suited to our research problem: DAS3H builds on the additive factor models and includes a representation of the temporal distribution of past practice on the skills involved by an item. In particular, DAS3H allows the learning and forgetting curves to differ from one skill to another. Finally, we provide empirical evidence on three real-world educational datasets that DAS3H outperforms other state-of-the-art EDM models. These results suggest that incorporating both item-skill relationships and forgetting effect improves over student models that consider one or the other. 
+
+Comments: 	10 pages, 1 figure, 6 tables, to appear at the 12th International Conference on Educational Data Mining (EDM 2019)
+Subjects: 	Computers and Society (cs.CY) ; Artificial Intelligence (cs.AI); Applications (stat.AP); Machine Learning (stat.ML)
+Cite as: 	arXiv:1905.06873 [cs.CY]
+  	(or arXiv:1905.06873v1 [cs.CY] for this version)
+Try the Bibliographic Explorer
+(can be disabled at any time)
+Enable Don't show again
+Bibliographic data
+[ Enable Bibex ( What is Bibex? )]
+Submission history
+From: Benoît Choffin [ view email ]
+[v1] Tue, 14 May 2019 16:41:03 UTC (59 KB)
+Which authors of this paper are endorsers? | Disable MathJax ( What is MathJax? ) Browse v0.2.1 released 2019-04-18    Feedback?
+
+    About arXiv
+    Leadership Team
+
+    Contact Us
+    Follow us on Twitter
+
+    Help
+    Privacy Policy
+
+    Blog
+    Subscribe
+
+arXiv® is a registered trademark of Cornell University.
+
+If you have a disability and are having trouble accessing information on this website or need materials in an alternate format, contact web-accessibility@cornell.edu for assistance.
