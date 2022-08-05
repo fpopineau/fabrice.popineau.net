@@ -161,9 +161,9 @@
 <div   id="bibliography">
 
 <!-- <bibtex src="/ox-hugo/Conferences.bib"></bibtex> -->
-<p><bibtex src="/ox-hugo/filtered-publications.bib"></bibtex></p>
+<p><bibtex src="/ox-hugo/mes-publications.bib"></bibtex></p>
 <div class="bibtex_structure">
-  <div class="group year" extra="ASC number">
+  <div class="group year" extra="DESC number">
   	  <a href="#top" style="display: inline; float: right;"><em>(Top of the page)</em></a>
   	  <div style="padding-bottom:10px;"></div>
   	  <div class="sort journal" extra="DESC string">
@@ -171,7 +171,9 @@
       </div>
   </div>
 </div>
-<div id="bibtex_display">
+<!-- https://stackoverflow.com/questions/406230/regular-expression-to-match-a-line-that-doesnt-contain-a-word -->
+<!-- The non capturing one does not work? -->
+<div class="bibtex_display" keywords="^((?!TEX).)*$">
   <div class="if bibtex_template" style="display: none;">
     <ul> <li>
       <!-- <span class="if journal !nolink">
@@ -205,6 +207,9 @@
         <span class="if year"><span class="year"></span>.</span>
         <!-- <span class="if note"><span class="note"></span>.</span> -->
         <!-- <a class="bibtexVar" role="button" data-toggle="collapse" href="#bib+BIBTEXKEY+" aria-expanded="false" aria-controls="bib+BIBTEXKEY+" extra="BIBTEXKEY"> -->
+        <span class="if file">
+          <a class="bibtexVar" href="+FILE+" extra="FILE">[file]</a>
+        </span>
         <a role="button" class="bibtexVar" id="button+BIBTEXKEY+" extra="BIBTEXKEY" onclick="getElementById('bib+BIBTEXKEY+').classList.toggle('collapse')">
 		  [bib]</a  >
 		<!-- </a> -->

@@ -172,9 +172,79 @@ The <a href="https://www.tug.org/TUGboat/tb27-0/tb85complete.pdf">full proceedin
 </figure>
 </div>
 <h2 id="references">References</h2>
+<!-- ## Journal articles {#journal-articles} -->
 <div   id="bibliography">
 
+<!-- <bibtex src="/ox-hugo/Conferences.bib"></bibtex> -->
+<p><bibtex src="/ox-hugo/mes-publications.bib"></bibtex></p>
+<div class="bibtex_structure">
+  <div class="group year" extra="DESC number">
+  	  <a href="#top" style="display: inline; float: right;"><em>(Top of the page)</em></a>
+  	  <div style="padding-bottom:10px;"></div>
+  	  <div class="sort journal" extra="DESC string">
+      	<div class="templates"></div>
+      </div>
+  </div>
+</div>
+<!-- https://stackoverflow.com/questions/406230/regular-expression-to-match-a-line-that-doesnt-contain-a-word -->
+<!-- The non capturing one does not work? -->
+<div class="bibtex_display" keywords="TEX">
+  <div class="if bibtex_template" style="display: none;">
+    <ul> <li>
+      <!-- <span class="if journal !nolink">
+        <a class="bibtexVar" href="http://www.cs.cmu.edu/~mmv/papers/+BIBTEXKEY+.pdf" extra="BIBTEXKEY">
+            <span style="text-decoration: underline;" class="title"></span>,
+        </a>
+      </span> -->
+      <span class="if url">
+        <a class="bibtexVar" href="+URL+" extra="URL" >
+            <span style="text-decoration: underline;" class="title"></span>,
+        </a>
+      </span>
+      <span class="if !url">
+            <span class="title"></span>,
+      </span>
+      <div class="if author">
+        <!-- <span class="author"></span> -->
+        <span class="author"><span class="first_initial"></span> <span class="last"></span></span>,
+      </div>
+      <div>
+        <span class="if journal"><em><span class="journal"></span></em>,</span>
+        <span class="if booktitle">In <em><span class="booktitle"></span></em>,</span>
+        <span class="if editor"><span class="editor"></span> (editors),</span>
+        <span class="if publisher"><em><span class="publisher"></span></em>,</span>
+        <span class="if !journal number">Technical report <span class="number"></span>,</span>
+        <span class="if institution"><span class="institution"></span>,</span>
+        <span class="if address"><span class="address"></span>,</span>
+        <span class="if volume"><span class="volume"></span>,</span>
+        <span class="if journal number">(<span class="number"></span>),</span>
+        <span class="if pages"> pages <span class="pages"></span>,</span>
+        <span class="if month"><span class="month"></span>,</span>
+        <span class="if year"><span class="year"></span>.</span>
+        <!-- <span class="if note"><span class="note"></span>.</span> -->
+        <!-- <a class="bibtexVar" role="button" data-toggle="collapse" href="#bib+BIBTEXKEY+" aria-expanded="false" aria-controls="bib+BIBTEXKEY+" extra="BIBTEXKEY"> -->
+        <span class="if file">
+          <a class="bibtexVar" href="+FILE+" extra="FILE">[file]</a>
+        </span>
+        <a role="button" class="bibtexVar" id="button+BIBTEXKEY+" extra="BIBTEXKEY" onclick="getElementById('bib+BIBTEXKEY+').classList.toggle('collapse')">
+		  [bib]</a  >
+		<!-- </a> -->
+      </div>
+      <div class="bibtexVar collapse" id="bib+BIBTEXKEY+" extra="BIBTEXKEY">
+		    <pre><span class="bibtexraw noread"></span></pre>
+	    </div>
+      <div style="display:none"><span class="bibtextype"></span></div>
+      <div style="display:none"><span class="if topic"><span class="topic"></span></span></div>
+    </li></ul>
+  </div>
+</div>
+</div>
+
+<!-- <div   id="bibliography">
+
+
 <table>
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau2004TDS">1</a>]
@@ -185,8 +255,11 @@ Fabrice Popineau.
  <em>Cahiers GUTenberg</em>, (44-45):83-114, 2004.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau2004TDS">bib</a>&nbsp;|
 <a href="http://cahiers.gutenberg.eu.org/cg-bin/article/CG_2004___44-45_83_0.pdf">.pdf</a>&nbsp;]
+
 </td>
 </tr>
+
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau:015">2</a>]
@@ -198,8 +271,11 @@ Marie-Louise Chaix and Fabrice Popineau.
  TUG 2003, 24th Annual Conference of the <span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span> Users Group, Outrigger
   Waikoloa Beach, Hawaii, USA, July 2003.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau:015">bib</a>&nbsp;]
+
 </td>
 </tr>
+
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau2003xemtex">3</a>]
@@ -210,8 +286,11 @@ Marie-Louise Chaix and Fabrice Popineau.
  <em>TUGBoat</em>, 24(3):415-419, June 2003.
  Proceedings of the Euro<span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span> 2003 Conference, Brest, France.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau2003xemtex">bib</a>&nbsp;]
+
 </td>
 </tr>
+
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau:013">4</a>]
@@ -222,8 +301,11 @@ Sebastian Rahtz and Fabrice Popineau.
  28. Mitgliederversammlung von DANTE e.V., April 2003.
  Bremen, Germany.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau:013">bib</a>&nbsp;]
+
 </td>
 </tr>
+
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau2002texlive">5</a>]
@@ -234,8 +316,11 @@ Fabrice Popineau.
  <em>TUGBoat</em>, 23(1):74-79, September 2002.
  Proceedings of the TUG 2002 Conference, Trivandrum, India.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau2002texlive">bib</a>&nbsp;]
+
 </td>
 </tr>
+
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau:011">6</a>]
@@ -245,8 +330,11 @@ Fabrice Popineau.
  Status and future of <span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span>live.
  26. Mitgliederversammlung von DANTE e.V., 20 - 23 February 2002.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau:011">bib</a>&nbsp;]
+
 </td>
 </tr>
+
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau:010">7</a>]
@@ -258,8 +346,11 @@ Fabrice Popineau and Stanislaw Wawrykiewicz.
   Współczesne <span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span>niki publikacyjne (Contemporary Publishing <span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span>nology),
   Bachotek, Poland, 29 April - 1 May 2001.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau:010">bib</a>&nbsp;]
+
 </td>
 </tr>
+
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau2001directions">8</a>]
@@ -272,8 +363,11 @@ Fabrice Popineau.
   Netherlands.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau2001directions">bib</a>&nbsp;|
 <a href="https://www.ntg.nl/maps/26/20.pdf">.pdf</a>&nbsp;]
+
 </td>
 </tr>
+
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau2001GUST">9</a>]
@@ -284,8 +378,11 @@ Fabrice Popineau.
  <em>Biuletyn GUST</em>, (17):17-23, 2001.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau2001GUST">bib</a>&nbsp;|
 <a href="ftp://ftp.gust.org.pl/pub/GUST/bulletin/17/popineau01.ps.gz">.ps.gz</a>&nbsp;]
+
 </td>
 </tr>
+
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau:009">10</a>]
@@ -296,8 +393,11 @@ Fabrice Popineau.
  <em>Cahiers GUTenberg</em>, (41):167-175, 2001.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau:009">bib</a>&nbsp;|
 <a href="http://cahiers.gutenberg.eu.org/cg-bin/article/CG_2001___41_167_0.pdf">.pdf</a>&nbsp;]
+
 </td>
 </tr>
+
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau2000affichez">11</a>]
@@ -308,8 +408,11 @@ Fabrice Popineau.
  <em>Cahiers GUTenberg</em>, (37-38):5-43, 2000.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau2000affichez">bib</a>&nbsp;|
 <a href="http://cahiers.gutenberg.eu.org/cg-bin/article/CG_2000___37-38_5_0.pdf">.pdf</a>&nbsp;]
+
 </td>
 </tr>
+
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau1999fptexTUG">12</a>]
@@ -322,8 +425,11 @@ Fabrice Popineau.
   Vancouver.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau1999fptexTUG">bib</a>&nbsp;|
 <a href="https://www.tug.org/TUGboat/tb20-3/tb64popin.pdf">.pdf</a>&nbsp;]
+
 </td>
 </tr>
+
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau1999fptexGUT">13</a>]
@@ -335,8 +441,11 @@ Fabrice Popineau.
  Actes GUT'99, 18 - 20 mai, Lyon.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau1999fptexGUT">bib</a>&nbsp;|
 <a href="http://cahiers.gutenberg.eu.org/cg-bin/article/CG_1999___32_47_0.pdf">.pdf</a>&nbsp;]
+
 </td>
 </tr>
+
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau:005">14</a>]
@@ -346,8 +455,11 @@ Fabrice Popineau.
  Uk-tug special win32 meeting, may 1999.
  First public presentation of fp<span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span>.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau:005">bib</a>&nbsp;]
+
 </td>
 </tr>
+
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau1998windvi">15</a>]
@@ -358,8 +470,11 @@ Fabrice Popineau.
  <em>MAPS</em>, 20:146-149, 1998.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau1998windvi">bib</a>&nbsp;|
 <a href="https://www.ntg.nl/maps/20/29.pdf">.pdf</a>&nbsp;]
+
 </td>
 </tr>
+
+
 <tr valign="top">
 <td align="right" class="bibtexnumber">
 [<a name="popineau1997rapidite">16</a>]
@@ -371,11 +486,12 @@ Fabrice Popineau.
  Actes de GUT’97, Strasbourg.
 [&nbsp;<a href="c:/Temp/Publications-TeX_bib.html#popineau1997rapidite">bib</a>&nbsp;|
 <a href="http://cahiers.gutenberg.eu.org/cg-bin/article/CG_1997___26_96_0.pdf">.pdf</a>&nbsp;]
+
 </td>
 </tr>
 </table>
 </div>
-
+ -->
 
   </main>
 

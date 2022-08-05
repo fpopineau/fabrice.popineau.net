@@ -1,0 +1,427 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>[1905.06873] DAS3H: Modeling Student Learning and Forgetting for Optimally Scheduling Distributed Practice of Skills</title>
+  <link rel="shortcut icon" href="https://static.arxiv.org/static/browse/0.2.5/images/icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" media="screen" href="arXiv.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="browse_search.css">
+  <!-- Matomo -->
+  <script type="text/javascript" async="" defer="defer" src="matomo.js"></script><script type="text/javascript">
+    var _paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["setCookieDomain", "*.arxiv.org"]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://webstats.arxiv.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '1']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  <link rel="stylesheet" href="font-awesome.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="bibex.css">
+  <script src="mathjaxToggle.js" type="text/javascript"></script><script type="text/javascript" src="com.js"></script>
+<script type="text/javascript">window.ATL_JQ_PAGE_PROPS =  {
+  "triggerFunction": function(showCollectorDialog) {
+    //Requires that jQuery is available!
+    jQuery("#feedback-button").click(function(e) {
+      e.preventDefault();
+      showCollectorDialog();
+    });
+  },
+  fieldValues: {
+    "components": ["15700"],  // Jira ID for browse component
+    "versions": ["14153"],    // Jira ID for browse-0.2.1 release
+    "customfield_11401": window.location.href
+  }
+  };
+</script>
+  <meta name="citation_title" content="DAS3H: Modeling Student Learning and Forgetting for Optimally Scheduling Distributed Practice of Skills">
+  <meta name="citation_author" content="Choffin, Benoît">
+  <meta name="citation_author" content="Popineau, Fabrice">
+  <meta name="citation_author" content="Bourda, Yolaine">
+  <meta name="citation_author" content="Vie, Jill-Jênn">
+  <meta name="citation_date" content="2019/05/14">
+  <meta name="citation_online_date" content="2019/05/14">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/1905.06873">
+  <meta name="citation_arxiv_id" content="1905.06873"><meta name="twitter:site" content="@arxiv">
+    <meta property="twitter:title" content="DAS3H: Modeling Student Learning and Forgetting for Optimally...">
+    <meta property="twitter:description" content="Spaced repetition is among the most studied learning strategies in the
+cognitive science literature. It consists in temporally distributing exposure
+to an information so as to improve long-term...">
+    <meta property="og:site_name" content="arXiv.org">
+    <meta property="og:title" content="DAS3H: Modeling Student Learning and Forgetting for Optimally Scheduling Distributed Practice of Skills">
+    <meta property="og:url" content="https://arxiv.org/abs/1905.06873v1">
+    <meta property="og:description" content="Spaced repetition is among the most studied learning strategies in the
+cognitive science literature. It consists in temporally distributing exposure
+to an information so as to improve long-term memorization. Providing students
+with an adaptive and personalized distributed practice schedule would benefit
+more than just a generic scheduler. However, the applicability of such adaptive
+schedulers seems to be limited to pure memorization, e.g. flashcards or foreign
+language learning. In this article, we first frame the research problem of
+optimizing an adaptive and personalized spaced repetition scheduler when
+memorization concerns the application of underlying multiple skills. To this
+end, we choose to rely on a student model for inferring knowledge state and
+memory dynamics on any skill or combination of skills. We argue that no
+knowledge tracing model takes both memory decay and multiple skill tagging into
+account for predicting student performance. As a consequence, we propose a new
+student learning and forgetting model suited to our research problem: DAS3H
+builds on the additive factor models and includes a representation of the
+temporal distribution of past practice on the skills involved by an item. In
+particular, DAS3H allows the learning and forgetting curves to differ from one
+skill to another. Finally, we provide empirical evidence on three real-world
+educational datasets that DAS3H outperforms other state-of-the-art EDM models.
+These results suggest that incorporating both item-skill relationships and
+forgetting effect improves over student models that consider one or the other.">
+<script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({
+  messageStyle: 'none',
+  extensions: ['tex2jax.js'],
+  jax: ['input/TeX','output/HTML-CSS'],
+  tex2jax: {
+    inlineMath: [['$','$']],
+    processEscapes: true,
+    ignoreClass: '.*',
+    processClass: 'mathjax.*',
+  },
+  TeX: {
+    extensions: ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js'],
+    noErrors: {
+      inlineDelimiters: ['$','$'],
+      multiLine: false,
+      style: {
+        'font-size': 'normal',
+        'border': ''
+      }
+    }
+  }
+});</script><script type="text/javascript" src="MathJax.js"></script><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.atlwdg-blanket {background: black;height: 100%;left: 0;opacity: .5;position: fixed;top: 0;width: 100%;z-index: 1000000;}.atlwdg-popup {background: white;border: 1px solid #ccc;position: fixed;top: 0;right: 0;bottom: 0;left: 0;margin: auto;z-index: 10000011;border-radius: 5px;background-clip: padding-box;overflow: hidden;width: 810px;height: 0;max-height: calc(100% - 100px);}#atlwdg-frame {height: 100%;width: 100%;}.atlwdg-hidden {visibility: hidden;}.atlwdg-trigger {position: fixed;background: #205081;padding: 5px;border: 2px solid white;border-top: none;font-weight: bold;color: white !important;display: block;white-space: nowrap;text-decoration: none !important;font-family: Arial, Helvetica, sans-serif;font-size: 12px;-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);border-radius: 0 0 5px 5px;}.atlwdg-trigger.atlwdg-TOP {left: 45%;top: 0;}.atlwdg-trigger.atlwdg-RIGHT {left: 100%;top: 40%;-webkit-transform: rotate(90deg);-webkit-transform-origin: top left;-moz-transform: rotate(90deg);-moz-transform-origin: top left;-ms-transform: rotate(90deg);-ms-transform-origin: top left;transform: rotate(90deg);transform-origin: top left;}.atlwdg-trigger.atlwdg-SUBTLE {right: 0;bottom: 0;border: 1px solid #ccc;border-bottom: none;border-right: none;background-color: #f5f5f5;color: #444 !important;font-size: 11px;padding: 6px;-webkit-box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.5);box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.5);border-radius: 2px 0 0 0;}.atlwdg-loading {position: fixed;top: 0;right: 0;bottom: 0;left: 0;margin: auto;height: 40px;width: 40px;z-index: 1000001;border-radius: 5px;background-color: #fff;background-image: url('data:image/gif;base64,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');background-repeat: no-repeat;background-position: center center;}@media print {.atlwdg-trigger { display: none; }}@media screen and (max-width: 820px) {.atlwdg-popup {max-width: 810px;width: 90%;max-height: 90%;}}</style></head>
+
+<body class="with-cu-identity"><div id="MathJax_Message" style="display: none;"></div>
+  
+<div class="slider-wrapper" style="display:none">
+  <a class="close-slider" href="#"><img src="close-slider.png"></a>
+  <div class="copy-donation">
+    <h1>Donate to arXiv</h1>
+    <p>
+      Please join the <a href="https://simonsfoundation.org/">Simons Foundation</a> and our
+      generous <a href="https://arxiv.org/about/ourmembers">member organizations</a>
+      in supporting arXiv during our giving campaign September 23-27. 100% of your contribution will fund
+      improvements and new initiatives to benefit arXiv's global scientific community.
+    </p>
+  </div>
+  <div class="amount-donation">
+    <div class="wrapper">
+      <div class="donate-cta"><a class="banner_link" href="https://bit.ly/arXivDONATE1"><b>DONATE</b></a>
+        <p>[secure site, no need to create account]</p>
+      </div>
+    </div>
+  </div>
+</div><noscript><img src="https://webstats.arxiv.org/matomo.php?idsite=1&amp;rec=1" style="border:0" alt="" /></noscript>
+  <div id="cu-identity">
+    <div id="cu-logo">
+      <a href="https://www.cornell.edu/"><img src="cornell-reduced-white-SMALL.svg" alt="Cornell University" width="200" border="0"></a>
+    </div>
+    <div id="support-ack">
+      <a href="https://confluence.cornell.edu/x/ALlRF">We gratefully acknowledge support from<br>the Simons Foundation and member institutions.</a>
+    </div>
+  </div>
+
+  <div id="header">
+    <a aria-hidden="true" href="https://arxiv.org/abs/%7Burl_path%28%27ignore_me%27%29%7D"></a>
+    
+  <h1><a href="https://arxiv.org/">arXiv.org</a> &gt; <a href="https://arxiv.org/list/cs/recent">cs</a> &gt; arXiv:1905.06873</h1>
+
+    
+    
+  <div class="search-block level-right">
+    <form class="level-item mini-search" method="GET" action="https://arxiv.org/search">
+      <div class="field has-addons">
+        <div class="control">
+          <input class="input is-small" name="query" placeholder="Search..." aria-label="Search term or terms" type="text">
+          <p class="help"><a href="https://arxiv.org/help">Help</a> | <a href="https://arxiv.org/search/advanced">Advanced Search</a></p>
+        </div>
+        <div class="control">
+          <div class="select is-small">
+            <select name="searchtype" aria-label="Field to search">
+              <option value="all" selected="selected">All fields</option>
+              <option value="title">Title</option>
+              <option value="author">Author</option>
+              <option value="abstract">Abstract</option>
+              <option value="comments">Comments</option>
+              <option value="journal_ref">Journal reference</option>
+              <option value="acm_class">ACM classification</option>
+              <option value="msc_class">MSC classification</option>
+              <option value="report_num">Report number</option>
+              <option value="paper_id">arXiv identifier</option>
+              <option value="doi">DOI</option>
+              <option value="orcid">ORCID</option>
+              <option value="author_id">arXiv author ID</option>
+              <option value="help">Help pages</option>
+              <option value="full_text">Full text</option>
+            </select>
+          </div>
+        </div>
+        <input name="source" value="header" type="hidden">
+        <button class="button is-small is-cul-darker">Search</button>
+      </div>
+    </form>
+  </div>
+   
+  </div>
+
+  <div id="content">
+    <!--
+rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+    <rdf:Description
+        rdf:about="/abs/1905.06873"
+        dc:identifier="/abs/1905.06873"
+        dc:title="DAS3H: Modeling Student Learning and Forgetting for Optimally Scheduling Distributed Practice of Skills"
+        trackback:ping="/trackback/1905.06873" />
+    </rdf:RDF>
+-->
+<div id="abs">
+  <div class="extra-services">
+    <div class="full-text">
+      <span class="descriptor">Full-text links:</span>
+      <h2>Download:</h2>
+      <ul>
+  <li><a href="https://arxiv.org/pdf/1905.06873" accesskey="f">PDF</a></li>
+  <li><a href="https://arxiv.org/format/1905.06873">Other formats</a></li></ul>
+      <div class="abs-license"><a href="http://creativecommons.org/licenses/by/4.0/" title="Rights to this article"><img src="by-4.png"></a></div>
+    </div>
+    <!--end full-text-->
+    <div class="browse">
+    <h3>Current browse context:</h3>
+  <div class="current">cs.CY</div>
+
+  <div class="prevnext">
+
+  <span class="arrow">
+    <a href="https://arxiv.org/prevnext?id=1905.06873&amp;function=prev&amp;context=cs.CY" accesskey="p" title="previous in cs.CY (accesskey p)">&lt;&nbsp;prev</a>
+  </span>&nbsp;|&nbsp;
+
+  
+  <span class="arrow">
+    <a href="https://arxiv.org/prevnext?id=1905.06873&amp;function=next&amp;context=cs.CY" accesskey="n" title="next in cs.CY (accesskey n)">next&nbsp;&gt;</a>
+  </span><br>
+  </div><div class="list">
+    <a href="https://arxiv.org/list/cs.CY/new">new</a>&nbsp;|
+    <a href="https://arxiv.org/list/cs.CY/recent">recent</a>&nbsp;|
+    <a href="https://arxiv.org/list/cs.CY/1905">1905</a>
+  </div><h3>Change to browse by:</h3>
+  <div class="switch">
+    
+      <a href="https://arxiv.org/abs/1905.06873?context=cs">cs</a>
+      
+    <br>
+    
+      <span class="subclass"><a href="https://arxiv.org/abs/1905.06873?context=cs.AI">cs.AI</a></span>
+      
+    <br>
+    
+      <a href="https://arxiv.org/abs/1905.06873?context=stat">stat</a>
+      
+    <br>
+    
+      <span class="subclass"><a href="https://arxiv.org/abs/1905.06873?context=stat.AP">stat.AP</a></span>
+      
+    <br>
+    
+      <span class="subclass"><a href="https://arxiv.org/abs/1905.06873?context=stat.ML">stat.ML</a></span>
+      
+    <br>
+    
+  </div>
+  
+    </div>
+
+    <div class="extra-ref-cite">
+      <h3>References &amp; Citations</h3>
+      <ul>
+        
+        <li><a href="https://ui.adsabs.harvard.edu/#abs/arXiv:1905.06873">NASA ADS</a></li>
+      </ul>
+    </div>
+
+    <div class="dblp">
+    <h3><a href="https://dblp.uni-trier.de/">DBLP</a> - CS Bibliography</h3>
+    <div class="list">
+      <a href="https://dblp.uni-trier.de/db/journals/corr/corr1905.html#abs-1905-06873" title="listing on DBLP">listing</a> | <a href="https://dblp.uni-trier.de/rec/bibtex/journals/corr/abs-1905-06873" title="DBLP bibtex record">bibtex</a>
+    </div>
+    
+    <div class="list">
+      <a href="https://dblp.uni-trier.de/search/author?author=Beno%C3%AEt%20Choffin" title="DBLP author search">Benoît Choffin</a><br><a href="https://dblp.uni-trier.de/search/author?author=Fabrice%20Popineau" title="DBLP author search">Fabrice Popineau</a><br><a href="https://dblp.uni-trier.de/search/author?author=Yolaine%20Bourda" title="DBLP author search">Yolaine Bourda</a><br><a href="https://dblp.uni-trier.de/search/author?author=Jill-J%C3%AAnn%20Vie" title="DBLP author search">Jill-Jênn Vie</a>
+    
+    </div>
+    
+  </div><div id="bib-sidebar" class="bib-sidebar"><div class="bib-outbound" style="margin: 0.3em;"><a href="javascript:void(0)" title="1905.06873">Export citation</a><br><a href="https://scholar.google.com/scholar?q=DAS3H%3A%20Modeling%20Student%20Learning%20and%20Forgetting%20for%20Optimally%20Scheduling%20Distributed%20Practice%20of%20Skills%20Beno%C3%AEt%20arXiv%202019" target="_blank">Google Scholar</a></div></div><div class="bookmarks">
+  <div><h3>Bookmark</h3></div><a href="https://arxiv.org/ct?url=http%3A%2F%2Fwww.bibsonomy.org%2FBibtexHandler%3FrequTask%3Dupload%26url%3Dhttps%3A%2F%2Farxiv.org%2Fabs%2F1905.06873%26description%3DDAS3H%3A+Modeling+Student+Learning+and+Forgetting+for+Optimally+Scheduling+Distributed+Practice+of+Skills&amp;v=558d40cb" title="Bookmark on BibSonomy">
+    <img src="bibsonomy.png" alt="BibSonomy logo">
+  </a>
+  <a href="https://arxiv.org/ct?url=https%3A%2F%2Fwww.mendeley.com%2Fimport%2F%3Furl%3Dhttps%3A%2F%2Farxiv.org%2Fabs%2F1905.06873&amp;v=2f50c628" title="Bookmark on Mendeley">
+    <img src="mendeley.png" alt="Mendeley logo">
+  </a>
+  <a href="https://arxiv.org/ct?url=https%3A%2F%2Freddit.com%2Fsubmit%3Furl%3Dhttps%3A%2F%2Farxiv.org%2Fabs%2F1905.06873%26title%3DDAS3H%3A+Modeling+Student+Learning+and+Forgetting+for+Optimally+Scheduling+Distributed+Practice+of+Skills&amp;v=a65f4724" title="Bookmark on Reddit">
+    <img src="reddit.png" alt="Reddit logo">
+  </a>
+  <a href="https://arxiv.org/ct?url=http%3A%2F%2Fsciencewise.info%2Fbookmarks%2Fadd%3Furl%3Dhttps%3A%2F%2Farxiv.org%2Fabs%2F1905.06873&amp;v=1485b8cd" title="Bookmark on ScienceWISE">
+    <img src="sciencewise.png" alt="ScienceWISE logo">
+  </a>
+</div>
+  </div>
+  <!--end extra-services-->
+
+  <div class="leftcolumn">
+    <div class="subheader">
+      <h1>Computer Science &gt; Computers and Society</h1>
+    </div>
+
+  
+
+<div id="content">
+  <div id="abs">
+
+    <h1 class="title mathjax"><span class="descriptor">Title:</span>DAS3H: Modeling Student Learning and Forgetting for Optimally Scheduling Distributed Practice of Skills</h1>
+    <div class="authors"><span class="descriptor">Authors:</span><a href="https://arxiv.org/search/cs?searchtype=author&amp;query=Choffin%2C+B">Benoît Choffin</a>, <a href="https://arxiv.org/search/cs?searchtype=author&amp;query=Popineau%2C+F">Fabrice Popineau</a>, <a href="https://arxiv.org/search/cs?searchtype=author&amp;query=Bourda%2C+Y">Yolaine Bourda</a>, <a href="https://arxiv.org/search/cs?searchtype=author&amp;query=Vie%2C+J">Jill-Jênn Vie</a></div>
+    <div class="dateline">
+  
+  
+  
+    
+  
+  
+    
+    
+  
+
+  (Submitted on 14 May 2019)</div>
+    <blockquote class="abstract mathjax"><span class="descriptor">Abstract:</span>  Spaced repetition is among the most studied learning strategies in the
+cognitive science literature. It consists in temporally distributing exposure
+to an information so as to improve long-term memorization. Providing students
+with an adaptive and personalized distributed practice schedule would benefit
+more than just a generic scheduler. However, the applicability of such adaptive
+schedulers seems to be limited to pure memorization, e.g. flashcards or foreign
+language learning. In this article, we first frame the research problem of
+optimizing an adaptive and personalized spaced repetition scheduler when
+memorization concerns the application of underlying multiple skills. To this
+end, we choose to rely on a student model for inferring knowledge state and
+memory dynamics on any skill or combination of skills. We argue that no
+knowledge tracing model takes both memory decay and multiple skill tagging into
+account for predicting student performance. As a consequence, we propose a new
+student learning and forgetting model suited to our research problem: DAS3H
+builds on the additive factor models and includes a representation of the
+temporal distribution of past practice on the skills involved by an item. In
+particular, DAS3H allows the learning and forgetting curves to differ from one
+skill to another. Finally, we provide empirical evidence on three real-world
+educational datasets that DAS3H outperforms other state-of-the-art EDM models.
+These results suggest that incorporating both item-skill relationships and
+forgetting effect improves over student models that consider one or the other.
+</blockquote>
+    <!--CONTEXT-->
+    <div class="metatable">
+      <table summary="Additional metadata">
+        <tbody><tr>
+          <td class="tablecell label">Comments:</td>
+          <td class="tablecell comments mathjax">10 pages, 1 figure, 6 tables, to appear at the 12th International Conference on Educational Data Mining (EDM 2019)</td>
+        </tr>
+        <tr>
+          <td class="tablecell label">Subjects:</td>
+          <td class="tablecell subjects">
+            <span class="primary-subject">Computers and Society (cs.CY)</span>; Artificial Intelligence (cs.AI); Applications (stat.AP); Machine Learning (stat.ML)</td>
+        </tr><tr>
+          <td class="tablecell label">Cite as:</td>
+          <td class="tablecell arxivid"><span class="arxivid"><a href="https://arxiv.org/abs/1905.06873">arXiv:1905.06873</a> [cs.CY]</span></td>
+        </tr>
+        <tr>
+          <td class="tablecell label">&nbsp;</td>
+          <td class="tablecell arxividv">(or <span class="arxivid">
+              <a href="https://arxiv.org/abs/1905.06873v1">arXiv:1905.06873v1</a> [cs.CY]</span> for this version)
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+  </div>
+</div>
+
+    <div id="bib-main" class="bib-main"><div class="bib-main"><div class="references-citations"><div style="display: block; position: relative; width: 100px;"><span class="tooltiptext"><span>Try the Bibliographic Explorer</span><br><span>(can be disabled at any time)</span><br><div><span><a href="javascript:;" class="green">Enable</a></span><span><a href="javascript:;">Don't show again</a></span></div></span></div><h2>Bibliographic data</h2><div class="references-citations-boxes"><div class="bib-sidebar-source"><span> <span><span>[<a id="biboverlay_toggle" href="javascript:;">Enable Bibex</a></span><span>(<a href="https://labs.arxiv.org/">What is Bibex?</a>)]</span></span></span></div><div class="bib-sidebar-msgs"></div></div></div></div></div><div class="submission-history">
+      <h2>Submission history</h2> From: Benoît Choffin [<a href="https://arxiv.org/show-email/9497bf0c/1905.06873">view email</a>]
+      <br><b>[v1]</b>
+Tue, 14 May 2019 16:41:03 UTC (59 KB)<br></div>
+  </div>
+  <!--end leftcolumn-->
+    <div class="endorsers"><a href="https://arxiv.org/auth/show-endorsers/1905.06873">Which authors of this paper are endorsers?</a> | <a id="mathjax_toggle" href="javascript:setMathjaxCookie()">Disable MathJax</a> (<a href="https://arxiv.org/help/mathjax">What is MathJax?</a>)
+      <span class="help" style="display: inline-block; font-style: normal; float: right; margin-top: 0; margin-right: 1em;"><a href="https://confluence.cornell.edu/x/G5H4FQ">Browse v0.2.1 released 2019-04-18</a>
+&nbsp;&nbsp;<button class="button is-small" id="feedback-button">Feedback?</button></span>
+    </div>
+    <script type="text/javascript" language="javascript">mathjaxToggle();</script>
+    <script src="bibex.js" type="text/javascript" defer="defer"></script>
+    
+
+</div>
+
+  </div>
+
+  <footer style="clear: both;">
+    <div class="columns is-desktop" role="navigation" aria-label="Secondary" style="margin: -0.75em -0.75em 0.75em -0.75em">
+      <!-- Macro-Column 1 -->
+      <div class="column" style="padding: 0;">
+        <div class="columns">
+          <div class="column">
+            <ul style="list-style: none; line-height: 2;">
+              <li><a href="https://arxiv.org/about">About arXiv</a></li>
+              <li><a href="https://arxiv.org/about/people/leadership_team">Leadership Team</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul style="list-style: none; line-height: 2;">
+              <li><span class="icon"><i class="fa fa-envelope"></i></span><a href="https://arxiv.org/help/contact"> Contact Us</a></li>
+              <li><span class="icon"><i class="fa fa-twitter"></i></span><a href="https://twitter.com/arxiv"> Follow us on Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Macro-Column 1 -->
+      <!-- Macro-Column 2 -->
+      <div class="column" style="padding: 0;">
+        <div class="columns">
+          <div class="column">
+            <ul style="list-style: none; line-height: 2;">
+              <li><a href="https://arxiv.org/help">Help</a></li>
+              <li><a href="https://arxiv.org/help/policies/privacy_policy">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul style="list-style: none; line-height: 2;">
+              <li><a href="https://blogs.cornell.edu/arxiv">Blog</a></li>
+              <li><a href="https://arxiv.org/help/subscribe"> Subscribe</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Macro-Column 2 -->
+    </div>
+
+    <div class="columns" style="border-top: 1px solid #979797; margin: -0.75em;">
+      <div class="column">
+        <p class="help" style="margin-bottom: 0;">arXiv® is a registered trademark of Cornell University.</p>
+      </div>
+      <div class="column">
+        <p class="help" style="margin-bottom: 0;">If you have a disability and are having trouble accessing information on this website or need materials in an alternate format,
+        contact <a href="mailto:web-accessibility@cornell.edu">web-accessibility@cornell.edu</a> for assistance.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+<div id="atlwdg-blanket" class="atlwdg-blanket" style="display: none;"></div><div id="atlwdg-container" class="atlwdg-popup atlwdg-hidden"></div></body></html>
