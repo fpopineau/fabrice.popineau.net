@@ -333,6 +333,10 @@ h1 {
     @include fluid-type(font-size, 600px, 1200px, 16px, 32px);
 }
 
+body.freestyle01 h1.YEAR {
+    font-size: 1.8em !important;
+}
+
 .center-cropped {
     width: 100%;
     /* height: minmax(20vh, 240px); */
