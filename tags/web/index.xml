@@ -5,11 +5,7 @@
     <link>https://fabrice.popineau.net/tags/web/</link>
     <description>Recent content in web on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://fabrice.popineau.net/tags/web/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://fabrice.popineau.net/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contact</title>
       <link>https://fabrice.popineau.net/contact/</link>
@@ -17,7 +13,7 @@
       
       <guid>https://fabrice.popineau.net/contact/</guid>
       <description>You can contact me at:
-CentraleSupelec           tel : +33 (0) 169851950   mail : fabrice dot popineau     at centralesupelec dot fr   location : Desk D2.21     Computer Science department     CentraleSupélec     Plateau de Moulon     3, rue Joliot-Curie     F-91190 Gif-sur-Yvette, FRANCE    LRI           tel : +33 (0) 169851950   mail : fabrice dot popineau at lisn dot fr   location : Desk 134/PCRI-S     Laboratoire de Recherche en Informatique     Bâtiment 650 Ada Lovelace     rue Noetzlin     F-91190 Gif-sur-Yvette, FRANCE     Werbung: pureblack.</description>
+CentraleSupelec tel : +33 (0) 169851950 mail : fabrice dot popineau at centralesupelec dot fr location : Desk D2.21 Computer Science department CentraleSupélec Plateau de Moulon 3, rue Joliot-Curie F-91190 Gif-sur-Yvette, FRANCE LRI tel : +33 (0) 169851950 mail : fabrice dot popineau at lisn dot fr location : Desk 134/PCRI-S Laboratoire de Recherche en Informatique Bâtiment 650 Ada Lovelace rue Noetzlin F-91190 Gif-sur-Yvette, FRANCE Werbung: pureblack.</description>
     </item>
     
   </channel>

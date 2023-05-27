@@ -157,33 +157,33 @@
     
     
     
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(save-excursion
-  (ignore-errors
-    (load-library <span style="color:#e6db74">&#34;org-bibtex&#34;</span>)
-    (switch-to-buffer (find-file-noselect <span style="color:#e6db74">&#34;~/Org/popineau/Publications.org&#34;</span>))
-    (org-bibtex <span style="color:#e6db74">&#34;~/Org/popineau/Publications-TeXLive.bib&#34;</span> <span style="color:#e6db74">&#34;<span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span>&#34;</span>)
-    (org-bibtex <span style="color:#e6db74">&#34;~/Org/popineau/Publications-journal-temp.bib&#34;</span> <span style="color:#e6db74">&#34;journal+EIAH|journal+IR|crossref&#34;</span>)
-    (<span style="color:#a6e22e">call-process</span> <span style="color:#e6db74">&#34;bib2bib.exe&#34;</span> <span style="color:#66d9ef">nil</span> (<span style="color:#a6e22e">get-buffer-create</span> (<span style="color:#a6e22e">make-temp-name</span> <span style="color:#e6db74">&#34;*bib2bib-*&#34;</span>)) <span style="color:#66d9ef">nil</span>
-                  <span style="color:#e6db74">&#34;-c&#34;</span> <span style="color:#e6db74">&#34;keywords : \&#34;EIAH\\|IR\&#34;&#34;</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34;-ob&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-journal.bib&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-journal-temp.bib&#34;</span>)
-    (org-bibtex <span style="color:#e6db74">&#34;~/Org/popineau/Publications-inbook-temp.bib&#34;</span> <span style="color:#e6db74">&#34;inbook+EIAH|inbook+IR|crossref&#34;</span>)
-    (<span style="color:#a6e22e">call-process</span> <span style="color:#e6db74">&#34;bib2bib.exe&#34;</span> <span style="color:#66d9ef">nil</span> (<span style="color:#a6e22e">get-buffer-create</span> (<span style="color:#a6e22e">make-temp-name</span> <span style="color:#e6db74">&#34;*bib2bib-*&#34;</span>)) <span style="color:#66d9ef">nil</span>
-                  <span style="color:#e6db74">&#34;-c&#34;</span> <span style="color:#e6db74">&#34;keywords : \&#34;EIAH\\|IR\&#34;&#34;</span> <span style="color:#e6db74">&#34;--expand-xrefs&#34;</span> <span style="color:#e6db74">&#34;-ob&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-inbook.bib&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-inbook-temp.bib&#34;</span>)
-    (org-bibtex <span style="color:#e6db74">&#34;~/Org/popineau/Publications-conf-temp.bib&#34;</span> <span style="color:#e6db74">&#34;conf+EIAH|conf+IR|crossref&#34;</span>)
-    (<span style="color:#a6e22e">call-process</span> <span style="color:#e6db74">&#34;bib2bib.exe&#34;</span> <span style="color:#66d9ef">nil</span> (<span style="color:#a6e22e">get-buffer-create</span> (<span style="color:#a6e22e">make-temp-name</span> <span style="color:#e6db74">&#34;*bib2bib-*&#34;</span>)) <span style="color:#66d9ef">nil</span>
-                  <span style="color:#e6db74">&#34;-c&#34;</span> <span style="color:#e6db74">&#34;keywords : \&#34;EIAH\\|IR\&#34;&#34;</span> <span style="color:#e6db74">&#34;--expand-xrefs&#34;</span> <span style="color:#e6db74">&#34;-ob&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-conf.bib&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-conf-temp.bib&#34;</span>)
-    (org-bibtex <span style="color:#e6db74">&#34;~/Org/popineau/Publications-poster-temp.bib&#34;</span> <span style="color:#e6db74">&#34;poster+EIAH|poster+IR|crossref&#34;</span>)
-    (<span style="color:#a6e22e">call-process</span> <span style="color:#e6db74">&#34;bib2bib.exe&#34;</span> <span style="color:#66d9ef">nil</span> (<span style="color:#a6e22e">get-buffer-create</span> (<span style="color:#a6e22e">make-temp-name</span> <span style="color:#e6db74">&#34;*bib2bib-*&#34;</span>)) <span style="color:#66d9ef">nil</span>
-                  <span style="color:#e6db74">&#34;-c&#34;</span> <span style="color:#e6db74">&#34;keywords : \&#34;EIAH\\|IR\&#34;&#34;</span> <span style="color:#e6db74">&#34;--expand-xrefs&#34;</span> <span style="color:#e6db74">&#34;-ob&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-poster.bib&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-poster-temp.bib&#34;</span>)
-    )
-  (<span style="color:#a6e22e">mapcar</span> <span style="color:#a6e22e">#&#39;</span>(lambda (f) (ignore-errors (<span style="color:#a6e22e">delete-file</span> f)))
-          <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;~/Org/popineau/Publications-journal-temp.bib&#34;</span>
-            <span style="color:#e6db74">&#34;~/Org/popineau/Publications-inbook-temp.bib&#34;</span>
-            <span style="color:#e6db74">&#34;~/Org/popineau/Publications-conf-temp.bib&#34;</span>
-            <span style="color:#e6db74">&#34;~/Org/popineau/Publications-poster-temp.bib&#34;</span>))
-  <span style="color:#75715e">;; (mapcar #&#39;(lambda (f) (rename-file f (expand-file f &#34;popineau/&#34;))) (directory-files &#34;.&#34; nil &#34;^Publications.*\.html$&#34;)</span>
-
-  )
-</code></pre></div><h2 id="main-publications">Main publications</h2>
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(save-excursion
+</span></span><span style="display:flex;"><span>  (ignore-errors
+</span></span><span style="display:flex;"><span>    (load-library <span style="color:#e6db74">&#34;org-bibtex&#34;</span>)
+</span></span><span style="display:flex;"><span>    (switch-to-buffer (find-file-noselect <span style="color:#e6db74">&#34;~/Org/popineau/Publications.org&#34;</span>))
+</span></span><span style="display:flex;"><span>    (org-bibtex <span style="color:#e6db74">&#34;~/Org/popineau/Publications-TeXLive.bib&#34;</span> <span style="color:#e6db74">&#34;<span class='TypoTEX'>T<span class='E'>E</span>X&thinsp;</span>&#34;</span>)
+</span></span><span style="display:flex;"><span>    (org-bibtex <span style="color:#e6db74">&#34;~/Org/popineau/Publications-journal-temp.bib&#34;</span> <span style="color:#e6db74">&#34;journal+EIAH|journal+IR|crossref&#34;</span>)
+</span></span><span style="display:flex;"><span>    (<span style="color:#a6e22e">call-process</span> <span style="color:#e6db74">&#34;bib2bib.exe&#34;</span> <span style="color:#66d9ef">nil</span> (<span style="color:#a6e22e">get-buffer-create</span> (<span style="color:#a6e22e">make-temp-name</span> <span style="color:#e6db74">&#34;*bib2bib-*&#34;</span>)) <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#e6db74">&#34;-c&#34;</span> <span style="color:#e6db74">&#34;keywords : \&#34;EIAH\\|IR\&#34;&#34;</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34;-ob&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-journal.bib&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-journal-temp.bib&#34;</span>)
+</span></span><span style="display:flex;"><span>    (org-bibtex <span style="color:#e6db74">&#34;~/Org/popineau/Publications-inbook-temp.bib&#34;</span> <span style="color:#e6db74">&#34;inbook+EIAH|inbook+IR|crossref&#34;</span>)
+</span></span><span style="display:flex;"><span>    (<span style="color:#a6e22e">call-process</span> <span style="color:#e6db74">&#34;bib2bib.exe&#34;</span> <span style="color:#66d9ef">nil</span> (<span style="color:#a6e22e">get-buffer-create</span> (<span style="color:#a6e22e">make-temp-name</span> <span style="color:#e6db74">&#34;*bib2bib-*&#34;</span>)) <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#e6db74">&#34;-c&#34;</span> <span style="color:#e6db74">&#34;keywords : \&#34;EIAH\\|IR\&#34;&#34;</span> <span style="color:#e6db74">&#34;--expand-xrefs&#34;</span> <span style="color:#e6db74">&#34;-ob&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-inbook.bib&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-inbook-temp.bib&#34;</span>)
+</span></span><span style="display:flex;"><span>    (org-bibtex <span style="color:#e6db74">&#34;~/Org/popineau/Publications-conf-temp.bib&#34;</span> <span style="color:#e6db74">&#34;conf+EIAH|conf+IR|crossref&#34;</span>)
+</span></span><span style="display:flex;"><span>    (<span style="color:#a6e22e">call-process</span> <span style="color:#e6db74">&#34;bib2bib.exe&#34;</span> <span style="color:#66d9ef">nil</span> (<span style="color:#a6e22e">get-buffer-create</span> (<span style="color:#a6e22e">make-temp-name</span> <span style="color:#e6db74">&#34;*bib2bib-*&#34;</span>)) <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#e6db74">&#34;-c&#34;</span> <span style="color:#e6db74">&#34;keywords : \&#34;EIAH\\|IR\&#34;&#34;</span> <span style="color:#e6db74">&#34;--expand-xrefs&#34;</span> <span style="color:#e6db74">&#34;-ob&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-conf.bib&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-conf-temp.bib&#34;</span>)
+</span></span><span style="display:flex;"><span>    (org-bibtex <span style="color:#e6db74">&#34;~/Org/popineau/Publications-poster-temp.bib&#34;</span> <span style="color:#e6db74">&#34;poster+EIAH|poster+IR|crossref&#34;</span>)
+</span></span><span style="display:flex;"><span>    (<span style="color:#a6e22e">call-process</span> <span style="color:#e6db74">&#34;bib2bib.exe&#34;</span> <span style="color:#66d9ef">nil</span> (<span style="color:#a6e22e">get-buffer-create</span> (<span style="color:#a6e22e">make-temp-name</span> <span style="color:#e6db74">&#34;*bib2bib-*&#34;</span>)) <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#e6db74">&#34;-c&#34;</span> <span style="color:#e6db74">&#34;keywords : \&#34;EIAH\\|IR\&#34;&#34;</span> <span style="color:#e6db74">&#34;--expand-xrefs&#34;</span> <span style="color:#e6db74">&#34;-ob&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-poster.bib&#34;</span> <span style="color:#e6db74">&#34;popineau/Publications-poster-temp.bib&#34;</span>)
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">mapcar</span> <span style="color:#a6e22e">#&#39;</span>(lambda (f) (ignore-errors (<span style="color:#a6e22e">delete-file</span> f)))
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;~/Org/popineau/Publications-journal-temp.bib&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;~/Org/popineau/Publications-inbook-temp.bib&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;~/Org/popineau/Publications-conf-temp.bib&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;~/Org/popineau/Publications-poster-temp.bib&#34;</span>))
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">;; (mapcar #&#39;(lambda (f) (rename-file f (expand-file f &#34;popineau/&#34;))) (directory-files &#34;.&#34; nil &#34;^Publications.*\.html$&#34;)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  )
+</span></span></code></pre></div><h2 id="main-publications">Main publications</h2>
 <h3 id="journal-articles">Journal articles</h3>
 <div id="bibliography">
 <h2>Références</h2>
@@ -632,8 +632,7 @@ Fabrice Popineau, Yolaine Bourda, and Bich-Liên Doan.
 </table>
 </div>
 <h2 id="artificial-intelligence">Artificial Intelligence</h2>
-<figure><a href="http://www.pearson.fr/livre/?GCOI=27440100534680">
-    <img src="/ox-hugo/aima-fr.png"/> </a>
+<figure><a href="http://www.pearson.fr/livre/?GCOI=27440100534680"><img src="/ox-hugo/aima-fr.png"/></a>
 </figure>
 
 <p>The leading textbook about artificial intelligence by Stuart Russell and Peter Norvig has been translated to French.
@@ -657,8 +656,7 @@ the number of pages (thicker, it would have required 2 volumes).</li>
 This was a demanding but rewarding collaborative work.</p>
 <p>I have (co-)organized the <a href="https://www.tug.org/TUGboat/Contents/contents27-0.html">2005 EuroTeX</a> meeting in Pont-à-Mousson with Donald E. Knuth and Hermann Zapf as guests.
 The <a href="https://www.tug.org/TUGboat/tb27-0/tb85complete.pdf">full proceedings</a> of the conference are available online.</p>
-<figure>
-    <img src="http:/ox-hugo/DEK&#43;Zapf.jpg"/> 
+<figure><img src="http:/ox-hugo/DEK&#43;Zapf.jpg"/>
 </figure>
 
 <h3 id="references">References</h3>

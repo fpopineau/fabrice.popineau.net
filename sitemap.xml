@@ -1,53 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://fabrice.popineau.net/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabrice.popineau.net/research/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabrice.popineau.net/publications/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabrice.popineau.net/teaching/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabrice.popineau.net/cv/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabrice.popineau.net/contact/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabrice.popineau.net/publications-main/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabrice.popineau.net/publications-books/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabrice.popineau.net/publications-tex/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabrice.popineau.net/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabrice.popineau.net/tags/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fabrice.popineau.net/tags/web/</loc>
   </url>
-  
 </urlset>
