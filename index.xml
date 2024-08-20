@@ -12,7 +12,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fabrice.popineau.net/research/</guid>
-      <description>Topics My main research aims at using artificial intelligence techniques to optimize human learning. In this current era where digital access to knowledge is cheap and user attention is expensive, a number of online applications have been developed for learning. These platforms collect a massive amount of data over various profiles, that can be used to improve learning experience: intelligent tutoring systems can infer what activities worked for different types of students in the past, and apply this knowledge to instruct new students.</description>
+      <description>Topics My main research is devoted to the themes of the Lusis - CentraleSupélec artificial intelligence chair. The chair is developping three axes of research:
+credit card payments fraud detection, which extends to anomaly detection, algorithmic trading, causality in the context of the link between patient data and pathologies. Some of the underlying questions that I like to tackle are:
+Previously, my main research aimed at using artificial intelligence techniques to optimize human learning.</description>
     </item>
     
     <item>
@@ -33,9 +35,9 @@ Main My main publications in conferences and journals AIMA book The French trans
       <guid>https://fabrice.popineau.net/teaching/</guid>
       <description>Current Courses since 2018 &amp;ndash; Algorithmics and Complexity. 1st year course. CentraleSupélec, Paris-Saclay campus.
 since 2019 &amp;ndash; Artificial Intelligence. 2nd year elective course. CentraleSupélec, Paris-Saclay campus.
-since 2020 &amp;ndash; Knowledge Representation and Reasoning. 3rd year specialization course, together with Prof. Yolaine Bourda, Paris-Saclay campus.
-since 2020 &amp;ndash; Automata and Languages Theory. 3rd year course, together with Prof. Pascale Le Gall and Marc Aiguier, Paris-Saclay campus.
-since 2020 &amp;ndash; Logic modelling. 3rd year course, together with Prof.</description>
+since 2020 &amp;ndash; Introduction to Python for Data Science. MSc Data Sience and Business Analytics. CentraleSupélec &amp;amp; Essec, Paris-Saclay campus.
+Others : Research projects in the context of the research track of studies at CentraleSupélec.
+Year-long projects for 3rd year students in the context of the Lusis-CentraleSupélec chair.</description>
     </item>
     
     <item>
