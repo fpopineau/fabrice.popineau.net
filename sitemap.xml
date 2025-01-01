@@ -2,28 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://fabrice.popineau.net/</loc>
+    <loc>http://localhost:1313/</loc>
   </url><url>
-    <loc>https://fabrice.popineau.net/research/</loc>
+    <loc>http://localhost:1313/research/</loc>
   </url><url>
-    <loc>https://fabrice.popineau.net/publications/</loc>
+    <loc>http://localhost:1313/publications/</loc>
   </url><url>
-    <loc>https://fabrice.popineau.net/teaching/</loc>
+    <loc>http://localhost:1313/teaching/</loc>
   </url><url>
-    <loc>https://fabrice.popineau.net/cv/</loc>
+    <loc>http://localhost:1313/cv/</loc>
   </url><url>
-    <loc>https://fabrice.popineau.net/contact/</loc>
+    <loc>http://localhost:1313/contact/</loc>
   </url><url>
-    <loc>https://fabrice.popineau.net/publications-main/</loc>
+    <loc>http://localhost:1313/publications-main/</loc>
   </url><url>
-    <loc>https://fabrice.popineau.net/publications-books/</loc>
+    <loc>http://localhost:1313/publications-books/</loc>
   </url><url>
-    <loc>https://fabrice.popineau.net/publications-tex/</loc>
+    <loc>http://localhost:1313/publications-tex/</loc>
   </url><url>
-    <loc>https://fabrice.popineau.net/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://fabrice.popineau.net/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url><url>
-    <loc>https://fabrice.popineau.net/tags/web/</loc>
+    <loc>http://localhost:1313/tags/web/</loc>
   </url>
 </urlset>
